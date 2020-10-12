@@ -1,0 +1,16 @@
+.cardContainer {
+  margin-top: 20px
+}
+
+.title {
+  font-size: 26px;
+  font-family: 'Segoe UI';
+  color: #800080;
+  font-weight: 100;
+}
+
+.cardList {
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}

@@ -1,0 +1,29 @@
+.songItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stt {
+  width: 30px;
+  height: 40px;
+  font-size: 12px;
+  color: #a0a0a0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  font-size: 12px;
+  color: #a0a0a0;
+}

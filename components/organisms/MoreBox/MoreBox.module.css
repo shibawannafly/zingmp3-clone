@@ -1,0 +1,79 @@
+.moreBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  position: absolute;
+  z-index: 5;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.songInfo {
+  padding: 15px 15px 0 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.btnGroup {
+  padding: 0 15px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #32323d;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  width: 80px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.btn small {
+  font-size: 10px;
+}
+
+.btn:hover {
+  background-color: #efefef;
+  color: #6e55b4;
+}
+
+.options {
+  padding-left: 0;
+  width: 100%;
+}
+
+.options li {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.options li span {
+  color:#32323d;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+.options li:hover {
+  background-color: #efefef !important;
+}
+
+.options li:hover span{
+  color: #6e55b4;
+}

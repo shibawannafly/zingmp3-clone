@@ -1,0 +1,132 @@
+.navbar {
+  height: 40px;
+  background: #e4e4e4;
+}
+
+.container {
+  width: 74%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menulink {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: #ccc;
+  margin: 0 5px;
+}
+
+.divider:hover {
+  background-color: #fff;
+}
+
+
+.menuitem {
+  position: relative;
+  list-style: none;
+  padding: 10px 15px;
+  height: 40px;
+}
+
+.menuitem a {
+  color: #000;
+}
+
+.menuitem:hover {
+  background: #fff;
+}
+
+.menuitem:hover > a{
+  color: #a845de;
+}
+
+.menuitem:hover > a{
+  color: #a845de;
+
+}
+
+.menuContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 3px 8px rgba(3,3,3,0.26);
+  border: 1px solid #d9d9d9;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.menuContainerCol {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(3,3,3,0.26);
+  border: 1px solid #d9d9d9;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.menuContainerCol li {
+  margin: 0 20px;
+  width: 120px; 
+}
+
+
+.itemList {
+  padding: 0;
+}
+
+.itemList li {
+  list-style: none;
+  height: 32px;
+}
+
+.itemList li a {
+  color: #333;
+}
+
+.itemList li:hover a {
+  color: #a845de;
+}
+
+.subcol {
+  margin: 0 20px;
+  width: 120px;
+}
+
+.title {
+  font-weight: 500;
+  height: 35px;
+}
+
+.title:hover {
+  color: #a845de;
+}
+
+.adveadvertiser {
+  color: #000;
+}
+
+.adveadvertiser:hover {
+  color: #a845de;
+}
+
+.upload {
+  color: #a845de;
+  margin-left: 10px;
+}
+

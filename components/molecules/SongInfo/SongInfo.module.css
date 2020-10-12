@@ -1,0 +1,12 @@
+.name {
+  margin-bottom: 0;
+  line-height: 18px;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist{
+  margin-bottom: 0;
+}

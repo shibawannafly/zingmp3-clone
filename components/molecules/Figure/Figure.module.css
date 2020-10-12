@@ -1,0 +1,50 @@
+.figure {
+  background-color: rgba(12, 12, 12);
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.figure img {
+  transition: 0.3s;
+}
+
+.figure:hover img{
+  opacity: 0.4;
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+.icon {
+  transition: 0.3s;
+  transform: scale(0) translate(-50%, -50%);
+  transform-origin: 0% 0%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+
+.figure:hover .icon {
+  transform: scale(1) translate(-50%, -50%);
+} 
+
+.rotating {
+  animation: imgRotate 12s infinite linear;
+}
+
+@keyframes imgRotate {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

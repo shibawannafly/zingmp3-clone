@@ -1,65 +1,83 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Layout from '../components/templates/Layout'
+import Carousel from '../components/organisms/Carousel'
+import ForYou from '../components/molecules/ForYou'
+import HotTopic from '../components/organisms/HotTopic'
+import Tab from '../components/organisms/Tab'
+import { weekMusic, weekMV } from '../components/organisms/Tab/tabData'
+import TopFiveList from '../components/templates/TopFiveList'
+import { topFiveData } from '../components/templates/TopFiveList/topFiveData'
+import CardList from '../components/templates/CardList'
+import { todayList, videoHot, albumHot } from '../components/templates/CardList/cardData'
+import NhacViet from '../components/templates/NhacViet'
+import HotArtist from '../components/templates/HotArtist'
+import Partner from '../components/templates/Partner'
+import News from '../components/templates/News'
+import Chart from '../components/templates/Chart'
+
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout>
       <Head>
-        <title>Create Next App</title>
+        <title>Zing MP3</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <section className={styles.leftSide}>
+          <Carousel/>
+          <Chart/>
+          <TopFiveList list={topFiveData} iconSize={24} />
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          {/* vui ve moi ngay */}
+          <CardList
+            title={todayList.title}
+            list={todayList.list}
+            imgH={todayList.imgH}
+          />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          {/* video hot */}
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <CardList
+            title={videoHot.title}
+            list={videoHot.list}
+            imgH={videoHot.imgH}
+          />
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+          {/* album hot */}
+
+          <CardList
+            title={albumHot.title}
+            list={albumHot.list}
+            imgH={albumHot.imgH}
+          />
+
+          {/* nhac viet */}
+          <NhacViet/>
+
+          {/* nghe si hot */}
+          <HotArtist/>
+
+        </section>
+
+        <aside className={styles.rightSide}>
+          <ForYou/>
+          <HotTopic/>
+          <Tab title={weekMusic.title} content={weekMusic.content} />
+          <Tab title={weekMV.title} content={weekMV.content} type='thumb' h={60}/>
+          <Tab title={weekMV.title} content={weekMV.content} type='thumb' h={110}/>
+          <News/>
+        </aside>
+
+        {/* doi tac */}
+        <aside className={styles.partnerContainer}>
+          <Partner/>
+        </aside>
+
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+    </Layout>
   )
 }

@@ -1,0 +1,63 @@
+.topFiveItem {
+  position: relative;
+  height: 80px;
+  padding: 10px;
+  width: 650px;
+}
+
+.rank {
+  width: 30px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  font-size: 20px;
+}
+
+
+.divider {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dividerContent{
+  width: 10px;
+  height: 2px;
+  background-color: #666;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 80px;
+  width: 500px;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  color: #666;
+  font-size: 16px;
+}

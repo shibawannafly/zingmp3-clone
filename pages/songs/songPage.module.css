@@ -1,0 +1,14 @@
+.songPage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.leftSide {
+  grid-column: 1 / 2;
+  padding: 20px 10px 20px 0;
+}
+
+.rightSide {
+  grid-column: 2 / 5;
+  padding: 20px 0;
+}

@@ -1,0 +1,16 @@
+.listening ul {
+  padding-left: 0;
+}
+
+.listening ul li {
+  list-style: none;
+  border-radius: 5px;
+}
+
+.listening ul li:hover {
+  background-color: #f7f7f7;
+}
+
+.active {
+  background-color: #f3f3f3;
+}
