@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './CardList.module.css'
+import styles from './CardList.module.scss'
 import CardItem from '../../organisms/CardItem'
 
 interface listItem{

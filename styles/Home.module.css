@@ -9,9 +9,17 @@
 .leftSide {
   grid-column-start: 1;
   grid-column-end: 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 
 .rightSide {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
 }
 
 .partnerContainer {

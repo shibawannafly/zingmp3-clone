@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Layout, Input } from "antd";
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import LoginForm from '../LoginForm'
 import User from '../../molecules/User'
 

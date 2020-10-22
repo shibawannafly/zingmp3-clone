@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import styles from './Layout.module.css'
+import styles from './Layout.module.scss'
 import CustomHeader from '../CustomHeader'
 import Footer from '../Footer'
 import ToTop from '../../atoms/ToTop'

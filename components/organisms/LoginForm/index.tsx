@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './LoginForm.module.css'
+import styles from './LoginForm.module.scss'
 import {useForm, Controller} from 'react-hook-form'
 import { Input as AntdInput, Form, Button, Alert } from "antd";
 

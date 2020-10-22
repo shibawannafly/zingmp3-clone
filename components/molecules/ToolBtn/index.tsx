@@ -1,7 +1,7 @@
 import React from 'react'
 import { Tooltip } from 'antd'
 import { HeartOutlined, MoreOutlined, } from '@ant-design/icons'
-import styles from './ToolBtn.module.css'
+import styles from './ToolBtn.module.scss'
 import MoreBox from '../../organisms/MoreBox'
 import {Dropdown} from 'antd'
 

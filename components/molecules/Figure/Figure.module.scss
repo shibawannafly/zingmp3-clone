@@ -1,0 +1,92 @@
+.figure {
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  & .thumb{
+    background-color: rgba(12, 12, 12, 1);
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+  & img {
+    transition: 0.3s;
+  }
+  
+  &:hover img{
+    opacity: 0.4;
+    transition: 0.3s;
+    transform: scale(1.05);
+  }
+  
+  .icon {
+    transition: 0.3s;
+    transform: scale(0) translate(-50%, -50%);
+    transform-origin: 0% 0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .iconRunning{
+    transition: 0.3s;
+    transform: scale(1) translate(-50%, -50%);
+    transform-origin: 0% 0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imgRunning {
+    opacity: 0.4; 
+  }
+  
+  
+  &:hover .icon {
+    transform: scale(1) translate(-50%, -50%);
+    transition: 0.3s;
+  } 
+  
+  
+  .rotating {
+    animation: imgRotate 12s infinite linear;
+  }
+  
+  .turnBack {
+    animation: turnBack 0.5s linear;
+    transition: 0.3s;
+  }
+}
+
+
+
+@keyframes imgRotate {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes turnBack {
+  0%{transform: rotate(0deg); border-radius: 50%;}
+  60%{transform: rotate(1turn);  border-radius: 50%;}
+  100% {transform: rotate(1turn); border-radius: 4px;} 
+}

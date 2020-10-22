@@ -1,6 +1,6 @@
 import React from 'react'
 import Figure from '../../molecules/Figure'
-import styles from './HotArtist.module.css'
+import styles from './HotArtist.module.scss'
 
 const data = [
   {

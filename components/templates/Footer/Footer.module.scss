@@ -1,0 +1,60 @@
+.footer {
+  background-color: #222428;
+  padding: 20px 20px 0 20px;
+  
+  .footerContainer {
+    padding: 0 12px;
+    max-width: 74%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    
+    .licenseContainer {
+      grid-column: 1/5;
+      color: gray;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      
+      .licenseInfo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .license {
+          margin-left: 10px;
+        }
+        
+        p {
+          margin-bottom: 0;
+          font-size: 12px;
+        }
+      }
+    }
+    
+    .info {
+      grid-column: 5/10;
+      
+      ul {
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        
+        li {
+          list-style: none;
+          margin-bottom: 10px;
+          
+          a {
+            color: #ddd;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    
+    .social {
+      grid-column: 10/13;
+    }
+  }
+}

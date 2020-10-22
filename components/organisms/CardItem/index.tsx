@@ -1,7 +1,7 @@
 import React from 'react'
 import Figure from '../../molecules/Figure'
 import SongInfo from '../../molecules/SongInfo'
-import styles from './CardItem.module.css'
+import styles from './CardItem.module.scss'
 
 type Props = {
   imgUrl: string,

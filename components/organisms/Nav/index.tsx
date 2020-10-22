@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Nav.module.css";
+import styles from "./Nav.module.scss";
 import Link from "next/link";
 import { HomeFilled, PoweroffOutlined, CloudUploadOutlined } from "@ant-design/icons";
 import {connect} from 'react-redux'

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './ToTop.module.css'
+import styles from './ToTop.module.scss'
 import {ArrowUpOutlined} from '@ant-design/icons'
 
 const ToTop:React.FC = () => {

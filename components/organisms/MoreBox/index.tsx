@@ -1,7 +1,7 @@
 import React from "react";
 import Figure from "../../molecules/Figure";
 import SongInfo from "../../molecules/SongInfo";
-import styles from "./MoreBox.module.css";
+import styles from "./MoreBox.module.scss";
 import {
   DownloadOutlined,
   LinkOutlined,

@@ -1,6 +1,6 @@
 import React from "react";
 import CustomLink from "../../atoms/CustomLink";
-import styles from "./SongInfo.module.css";
+import styles from "./SongInfo.module.scss";
 
 type Props = {
   name?: string,

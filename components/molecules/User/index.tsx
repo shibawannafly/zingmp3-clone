@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './User.module.css'
+import styles from './User.module.scss'
 import {Dropdown, Button, Menu} from 'antd'
 
 const User:React.FC = ({logoutUser}: any) => {

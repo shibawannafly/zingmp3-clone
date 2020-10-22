@@ -1,7 +1,7 @@
 import React from 'react'
 import CustomLink from '../../atoms/CustomLink'
 import {DownloadOutlined, PlusOutlined, ShareAltOutlined} from '@ant-design/icons'
-import styles from './OptionBtn.module.css'
+import styles from './OptionBtn.module.scss'
 
 const OptionBtn:React.FC = () => (
   <div className={styles.optionBtn }>

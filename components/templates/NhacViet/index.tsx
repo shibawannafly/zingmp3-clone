@@ -1,6 +1,6 @@
 import React from 'react'
 import NVItem from '../../organisms/NVItem'
-import styles from './NhacViet.module.css'
+import styles from './NhacViet.module.scss'
 import CustomLink from '../../atoms/CustomLink'
 // import { nvHotData } from './nvData'
 import { connect } from 'react-redux'
@@ -28,7 +28,7 @@ const NhacViet:React.FC = ({nvHotData}: any) => {
         </ul>
       </article>
 
-      <article className={styles.new}>
+      <article className={styles.hot}>
         <CustomLink color='#800080' st={{ fontFamily: 'Open Sans', fontWeight: 300 }} size={26}>{ title }</CustomLink>
         <ul className={styles.nvList}>
           {

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import styles from './Carousel.module.css'
+import styles from './Carousel.module.scss'
 
 const imgUrl = [1, 2, 3, 4, 5]
 

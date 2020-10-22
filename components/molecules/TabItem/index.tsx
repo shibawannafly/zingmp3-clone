@@ -1,7 +1,7 @@
 import React from 'react'
 import OptionBtn from '../OptionBtn'
 import CustomLink from '../../atoms/CustomLink'
-import styles from './TabItem.module.css'
+import styles from './TabItem.module.scss'
 
 type Props = {
   rank: number,

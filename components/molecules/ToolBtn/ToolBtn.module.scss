@@ -1,0 +1,21 @@
+.toolBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .btn {
+    border: none;
+    outline: none;
+    color: #2a2b3f;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+      background-color: #e8e8e8;
+      color: #000!important;
+    }
+  }
+}

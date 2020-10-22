@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Topic.module.css'
+import styles from './Topic.module.scss'
 
 type Props = {
   background: string

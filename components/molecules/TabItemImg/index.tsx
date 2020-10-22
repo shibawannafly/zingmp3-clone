@@ -1,7 +1,6 @@
 import React from "react";
 import Figure from "../Figure";
-import SongInfo from "../SongInfo";
-import styles from './TabItemImg.module.css'
+import styles from './TabItemImg.module.scss'
 import CustomLink from '../../atoms/CustomLink'
 
 type Props = {

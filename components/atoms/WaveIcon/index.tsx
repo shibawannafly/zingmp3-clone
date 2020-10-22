@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './WaveIcon.module.css'
+import styles from './WaveIcon.module.scss'
 
 const WaveIcon = () => (
   <div className={styles.waveIcon}>

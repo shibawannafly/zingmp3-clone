@@ -1,0 +1,67 @@
+.current {
+  height: 1200px;
+  
+  .stickyContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    top: 30px;
+    
+    .name {
+      font-size: 26px;
+      font-weight: 700;
+      color: #32323D;
+      margin-top: 20px;
+    }
+    
+    .artist {
+      font-size: 14px;
+      color: #a0a0a0;
+    }
+    
+    .playBtn {
+      color: #fff;
+      background: #65509e;
+      border-radius: 15px;
+      font-size: 12px;
+      cursor: pointer;
+      padding: 6px 12px;
+      margin-top: 20px;
+      line-height: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      &:hover {
+        color: #65509e;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+      }
+    }
+    
+    .info {
+      min-width: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #a0a0a0;
+      font-size: 12px;
+      margin-top: 15px;
+      
+      .dot {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: #a0a0a0;
+        margin: 0 4px;
+      }
+    }
+    
+    .tools {
+      margin-top: 30px;
+    }
+
+  }
+}

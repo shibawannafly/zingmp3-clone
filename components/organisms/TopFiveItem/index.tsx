@@ -2,7 +2,7 @@ import React from 'react'
 import Figure from '../../molecules/Figure'
 import OptionBtn from '../../molecules/OptionBtn'
 import SongInfo from '../../molecules/SongInfo'
-import styles from './TopFiveItem.module.css'
+import styles from './TopFiveItem.module.scss'
 
 type Props = {
   rank: any,

@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {PlayCircleOutlined, PauseCircleOutlined } from '@ant-design/icons'
 import WaveIcon from '../../atoms/WaveIcon'
-import styles from './Figure.module.css'
+import styles from './Figure.module.scss'
 import { useDispatch } from 'react-redux'
 import {playMusic} from '../../../redux/actions/musicAction'
 

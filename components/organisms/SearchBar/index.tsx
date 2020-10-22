@@ -1,6 +1,6 @@
 import React from 'react'
 import { Input } from 'antd'
-import './SearchBar.module.css'
+import './SearchBar.module.scss'
 
 const { Search } = Input
 

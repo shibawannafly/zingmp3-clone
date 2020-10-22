@@ -2,7 +2,7 @@ import React from 'react'
 import Figure from '../../molecules/Figure'
 import SongInfo from '../../molecules/SongInfo'
 import OptionBtn from '../../molecules/OptionBtn'
-import styles from './NVItem.module.css'
+import styles from './NVItem.module.scss'
 
 type Props = {
   imgUrl: string,

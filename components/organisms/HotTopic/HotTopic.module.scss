@@ -1,0 +1,20 @@
+.hotTopic {
+  width: 300px;
+  
+  .topicList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .title {
+    font-size: 18px;
+    color: #800080;
+    font-weight: 300;
+    margin-top: 20px;
+    font-family: 'Open Sans';
+  }
+}
+
+

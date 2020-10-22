@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './News.module.css'
+import styles from './News.module.scss'
 import CustomLink from '../../atoms/CustomLink'
 import Figure from '../../molecules/Figure'
 

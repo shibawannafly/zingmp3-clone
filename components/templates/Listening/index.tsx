@@ -1,6 +1,6 @@
 import React from 'react'
 import SongItem from '../../organisms/SongItem'
-import styles from './Listening.module.css'
+import styles from './Listening.module.scss'
 import { connect } from 'react-redux'
 
 const Listening:React.FC = ({data, play}: any) => {

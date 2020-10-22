@@ -1,0 +1,29 @@
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+    
+  .avatar {
+    width: 30px;
+    height: 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+
+  .userName {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+  }
+
+  .userName:hover {
+    background-color: transparent;
+  }
+
+}

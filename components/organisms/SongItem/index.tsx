@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './SongItem.module.css'
+import styles from './SongItem.module.scss'
 import SongDetail from '../../molecules/SongDetail'
 import ToolBtn from '../../molecules/ToolBtn'
 import MoreBox from '../MoreBox'

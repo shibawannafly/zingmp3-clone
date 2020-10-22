@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import CustomLink from "../../atoms/CustomLink";
 import { ArrowRightOutlined, PlayCircleOutlined  } from "@ant-design/icons";
-import styles from './Tab.module.css'
+import styles from './Tab.module.scss'
 import TabList from '../../organisms/TabList'
 import TabButton from '../../atoms/TabButton'
 

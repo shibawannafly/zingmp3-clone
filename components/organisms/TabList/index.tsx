@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './TabList.module.css'
+import styles from './TabList.module.scss'
 import TabItem from '../../molecules/TabItem'
 import TabItemImg from '../../molecules/TabItemImg'
 

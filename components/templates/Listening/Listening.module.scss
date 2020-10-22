@@ -1,0 +1,18 @@
+.listening {
+  ul {
+    padding-left: 0;
+    
+    li {
+      list-style: none;
+      border-radius: 5px;
+      
+      &:hover {
+        background-color: #f7f7f7;
+      }
+      
+      &.active {
+        background-color: #f3f3f3;
+      }
+    }
+  }
+}

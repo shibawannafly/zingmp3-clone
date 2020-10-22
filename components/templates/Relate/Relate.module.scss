@@ -1,0 +1,20 @@
+.relate {
+  margin: 20px 0 32px 0;
+  
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .slideBtn {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100px;
+      
+      div {
+        cursor: pointer;
+      }
+    }
+  }
+}

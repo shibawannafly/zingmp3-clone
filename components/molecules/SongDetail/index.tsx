@@ -1,7 +1,7 @@
 import React from 'react'
 import Figure from '../Figure'
 import SongInfo from '../SongInfo'
-import styles from './SongDetail.module.css'
+import styles from './SongDetail.module.scss'
 
 type Props = {
   name: string,

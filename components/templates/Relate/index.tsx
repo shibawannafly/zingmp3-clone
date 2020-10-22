@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react'
 import Figure from '../../molecules/Figure'
 import SongInfo from '../../molecules/SongInfo'
-import styles from './Relate.module.css'
+import styles from './Relate.module.scss'
 import Slider from 'react-slick'
 import {CaretLeftOutlined, CaretRightOutlined} from '@ant-design/icons'
 

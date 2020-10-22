@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './TabButton.module.css'
+import styles from './TabButton.module.scss'
 
 type Props = {
   content: string,

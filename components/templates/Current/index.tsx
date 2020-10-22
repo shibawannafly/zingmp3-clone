@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react'
 import Figure from '../../molecules/Figure'
 import ToolBtn from '../../molecules/ToolBtn'
-import styles from './Current.module.css'
+import styles from './Current.module.scss'
 import {PauseOutlined, CaretRightFilled} from '@ant-design/icons'
 import { connect, useSelector } from 'react-redux'
 

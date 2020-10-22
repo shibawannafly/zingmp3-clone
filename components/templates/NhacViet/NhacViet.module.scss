@@ -1,0 +1,20 @@
+.nhacViet {
+  width: 650px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+
+  .hot {
+    border-right: 1px solid #f2f2f2;
+    
+    .nvList {
+      padding-left: 0;
+      width: 100%;
+      margin-top: 10px;
+      
+      li {
+        list-style: none;
+      }
+    }
+  }
+}

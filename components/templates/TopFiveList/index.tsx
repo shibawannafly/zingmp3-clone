@@ -1,6 +1,6 @@
 import React from 'react'
 import TopFiveItem from '../../organisms/TopFiveItem'
-import styles from './TopFiveList.module.css'
+import styles from './TopFiveList.module.scss'
 
 interface listItem{
   rank: number,

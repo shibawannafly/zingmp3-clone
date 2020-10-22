@@ -1,6 +1,6 @@
 import React from 'react'
 import Topic from '../../molecules/Topic'
-import styles from './HotTopic.module.css'
+import styles from './HotTopic.module.scss'
 import CustomLink from '../../atoms/CustomLink'
 import {ArrowRightOutlined} from '@ant-design/icons'
 
