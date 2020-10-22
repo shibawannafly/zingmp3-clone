@@ -1,0 +1,847 @@
+{
+  "pageData": {
+    "navData": [
+      {
+       "name": "#zingchart",
+        "id": "#zingchart",
+        "type": 4,
+        "values": [
+          {
+            "col": "REALTIME",
+            "items": ["Bài Hát", "MV"]
+          },
+          {
+            "col": "TUẦN",
+            "items": ["Bài Hát", "MV", "Album"]
+          },
+          {
+            "col": "US-UK CHART",
+            "items": ["Bài Hát", "MV", "Album"]
+          },
+          {
+            "col": "KPOP CHART",
+            "items": ["Bài Hát", "MV", "Album"]
+          }
+        ]
+      },
+      {
+       "name": "Top 100",
+       "id": "top100",
+       "type": 1,
+       "values": ["Việt Nam", "Âu Mỹ", "Châu Á", "Hòa Tấu"]
+      },
+      {
+       "name": "Chủ Đề",
+       "id": "chude",
+       "type": 4,
+       "values": [
+          {
+           "col": "ĐỀ XUẤT",
+           "items": ["Nhạc HOT", "Những Bài HITs Mới", "Nhạc Việt Bất Hủ", "Nhạc Bất Hủ Âu Mỹ", "K-Pop HITs"]
+          },
+          {
+           "col": "THỂ LOẠI",
+           "items": ["EDM", "Acoustic", "Indie", "Nhạc Không Lời", "Trữ Tình & Bolero"]
+          },
+          {
+           "col": "TÂM TRẠNG",
+           "items": ["Những Ngày Mưa", "Tình Yêu", "Buồn", "Thư Giãn", "Động Lực"]
+          },
+          {
+           "col": "HOẠT ĐỘNG",
+           "items": ["Làm Việc", "Yoga", "Cà Phê", "Cuối Tuần", "Tiệc Tùng", "Du Lịch"]
+          }
+        ]
+      },
+      {
+       "name": "Video",
+       "id": "video",
+       "type": 4,
+       "values": [
+          {
+           "col": "VIỆT NAM",
+           "items": ["Nhạc Trẻ", "Nhạc Trữ Tình", "Dance Việt", "Rock Việt", "Rap / Hip Hop Việt", "Nhạc Trịnh", "Nhạc Thiếu Nhi"]
+          },
+          {
+           "col": "ÂU MỸ",
+           "items": ["Pop", "Rock", "Rap / Hip Hop", "Country", "Electronic / Dance", "R&B / Soul", "Audiophile"]
+          },
+          {
+           "col": "CHÂU Á",
+           "items": ["Hàn Quốc", "Nhật Bản", "Hoa Ngữ", "Thái Lan"]
+          },
+          {
+           "col": "HOÀ TẤU",
+           "items": ["Classical", "Piano", "Guitar", "Violin", "Cello", "Saxophone", "Nhạc Cụ Dân Tộc"]
+          }
+        ]
+      },
+      {
+       "name": "Album",
+       "id": "album",
+       "type": 4,
+       "values": [
+          {
+           "col": "VIỆT NAM",
+           "items": ["Nhạc Trẻ", "Nhạc Trữ Tình", "Dance Việt", "Rock Việt", "Rap / Hip Hop Việt", "Nhạc Trịnh", "Nhạc Thiếu Nhi"]
+          },
+          {
+           "col": "ÂU MỸ",
+           "items": ["Pop", "Rock", "Rap / Hip Hop", "Country", "Electronic / Dance", "R&B / Soul", "Audiophile"]
+          },
+          {
+           "col": "CHÂU Á",
+           "items": ["Hàn Quốc", "Nhật Bản", "Hoa Ngữ", "Thái Lan"]
+          },
+          {
+           "col": "HOÀ TẤU",
+           "items": ["Classical", "Piano", "Guitar", "Violin", "Cello", "Saxophone", "Nhạc Cụ Dân Tộc"]
+          }
+        ]
+      },
+      {
+       "name": "Nghệ sĩ",
+       "id": "nghesi",
+       "type": 1,
+       "values": ["Việt Nam", "Âu Mỹ", "Hàn Quốc", "Nhật Bản", "Hoa Ngữ", "Hòa Tấu"]
+      },
+      {
+       "name": "VIP",
+       "id": "vip",
+       "type": 1,
+       "values": ["Mua VIP", "Giới thiệu VIP"]
+      }
+    ],
+    "weekMusic": {
+      "title": "#ZINGCHART TUẦN - BÀI HÁT",
+      "content": [
+        {
+          "tabTitle": "Việt Nam",
+          "values": [
+            {
+              "name": "Hoa Hải Đường",
+              "rank": 1,
+              "artist": ["Jack"],
+              "view": "2052",
+              "img": "https://photo-zmp3.zadn.vn/banner/3/0/6/8/3068a4e198cb63856ce698865194d74d.jpg"
+            },
+            {
+              "name": "Bông Hoa Đẹp Nhất",
+              "rank": 2,
+              "artist": ["Quân A.P"],
+              "view": "2011",
+              "img": ""
+            },
+            {
+              "name": "Ai Mang Cô Đơn Đi",
+             "rank": 3,
+             "artist": ["K-ICM", "APJ"],
+             "view": "2011",
+             "img": ""
+            },
+            {
+              "name": "Đánh Mất Em",
+             "rank": 4,
+             "artist": ["Quang Đăng Trần"],
+             "view": "1929",
+             "img": ""
+            },
+            {
+             "name": "Bỏ Lỡ Một Người",
+             "rank": 5,
+             "artist": ["Lê Bảo Bình"],
+             "view": "1887",
+             "img": ""
+            },
+            {
+             "name": "Em Bé",
+             "rank": 6,
+             "artist": ["AMEE", "Karik"],
+             "view": "1846",
+             "img": ""
+            },
+            {
+             "name": "Anh Mệt Rồi",
+             "rank": 7,
+             "artist": ["Anh Quân idol"],
+             "view": "1805",
+             "img": ""
+            },
+            {
+             "name": "Khác Biệt",
+             "rank": 8,
+             "artist": ["Khắc Việt"],
+             "view": "1764",
+             "img": ""
+            },
+            {
+             "name": "Khác Biệt To Lớn",
+             "rank": 9,
+             "artist": ["Trịnh Thăng Bình", "Liz Kim Cương"],
+             "view": "1723",
+             "img": ""
+            },
+            {
+             "name": "Chẳng Thể Giữ Lấy Chẳng Đành Buông Tay",
+             "rank": 10,
+             "artist": ["Ngô Kiến Huy"],
+             "view": "1682",
+             "img": ""
+            }
+          ]
+        },
+        {
+          "tabTitle": "US-UK",
+          "values": [
+            {
+             "name": "WAP (feat. Megan Thee Stallion)",
+             "rank": 1,
+             "artist": ["Cardi B", "Megan Thee Stallion"],
+             "view": "",
+             "img": "https://photo-zmp3.zadn.vn/banner/5/c/4/c/5c4c5c21b097fdc610c7d852a3dd7ca2.jpg"
+            },
+            {
+             "name": "Mood",
+             "rank": 2,
+             "artist": ["24KGoldn", "Iann Dior"],
+             "view": "",
+             "img": ""
+            },
+            {
+             "name": "Watermelon Sugar",
+             "rank": 3,
+             "artist": ["Harry Styles"],
+             "view": "",
+             "img": ""
+            },
+            {
+             "name": "Đánh Mất Em",
+             "rank": 4,
+             "artist": ["Quang Đăng Trần"],
+             "view": "1929",
+             "img": ""
+            },
+            {
+             "name": "Bỏ Lỡ Một Người",
+             "rank": 5,
+             "artist": ["Lê Bảo Bình"],
+             "view": "1887",
+             "img": ""
+            },
+            {
+             "name": "Em Bé",
+             "rank": 6,
+             "artist": ["AMEE", "Karik"],
+             "view": "1846",
+             "img": ""
+            },
+            {
+             "name": "Anh Mệt Rồi",
+             "rank": 7,
+             "artist": ["Anh Quân idol"],
+             "view": "1805",
+             "img": ""
+            },
+            {
+             "name": "Khác Biệt",
+             "rank": 8,
+             "artist": ["Khắc Việt"],
+             "view": "1764",
+             "img": ""
+            },
+            {
+             "name": "Khác Biệt To Lớn",
+             "rank": 9,
+             "artist": ["Trịnh Thăng Bình", "Liz Kim Cương"],
+             "view": "1723",
+             "img": ""
+            },
+            {
+             "name": "Chẳng Thể Giữ Lấy Chẳng Đành Buông Tay",
+             "rank": 10,
+             "artist": ["Ngô Kiến Huy"],
+             "view": "1682",
+             "img": ""
+            }
+          ]
+        },
+        {
+          "tabTitle": "K-POP",
+          "values": [
+            {
+             "name": "How You Like That",
+             "rank": 1,
+             "artist": ["BLACKPINK"],
+             "view": "",
+             "img": "https://photo-zmp3.zadn.vn/banner/5/9/6/f/596f63ee5ab5acc060906c80ee3b849f.jpg"
+            },
+            {
+             "name": "eight",
+             "rank": 2,
+             "artist": ["IU", "SUGA"],
+             "view": "",
+             "img": ""
+            },
+            {
+             "name": "Dolphin",
+             "rank": 3,
+             "artist": ["OH MY GIRL"],
+             "view": "",
+             "img": ""
+            },
+            {
+             "name": "Đánh Mất Em",
+             "rank": 4,
+             "artist": ["Quang Đăng Trần"],
+             "view": "1929",
+             "img": ""
+            },
+            {
+             "name": "Bỏ Lỡ Một Người",
+             "rank": 5,
+             "artist": ["Lê Bảo Bình"],
+             "view": "1887",
+             "img": ""
+            },
+            {
+             "name": "Em Bé",
+             "rank": 6,
+             "artist": ["AMEE", "Karik"],
+             "view": "1846",
+             "img": ""
+            },
+            {
+             "name": "Anh Mệt Rồi",
+             "rank": 7,
+             "artist": ["Anh Quân idol"],
+             "view": "1805",
+             "img": ""
+            },
+            {
+             "name": "Khác Biệt",
+             "rank": 8,
+             "artist": ["Khắc Việt"],
+             "view": "1764",
+             "img": ""
+            },
+            {
+             "name": "Khác Biệt To Lớn",
+             "rank": 9,
+             "artist": ["Trịnh Thăng Bình", "Liz Kim Cương"],
+             "view": "1723",
+             "img": ""
+            },
+            {
+             "name": "Chẳng Thể Giữ Lấy Chẳng Đành Buông Tay",
+             "rank": 10,
+             "artist": ["Ngô Kiến Huy"],
+             "view": "1682",
+             "img": ""
+            }
+          ]
+        }
+      
+      ]
+    },
+    
+    
+    "weekMV": {
+      "title": "#ZINGCHART TUẦN - MV",
+      "content": [
+        {
+          "tabTitle": "Việt Nam",
+          "values": [
+            {
+             "name": "Đánh Mất Em",
+             "rank": 1,
+             "artist": ["Quang Đăng Trần"],
+             "view": "4273",
+             "img": "https://photo-zmp3.zadn.vn/banner/5/d/e/7/5de7389fc64be426fa43ebf448dcb531.jpg",
+             "imgUrl": ""
+            },
+            {
+             "name": "Chẳng Thể Giữ Lấy Chẳng Đành Buông Tay",
+             "rank": 2,
+             "artist": ["Ngô Kiến Huy"],
+             "view": "4086",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/a/6/2/9/a62907bcb56701101dba260f40b8267f.jpg"
+            },
+            {
+             "name": "Em Cần Một Người Quan Tâm",
+             "rank": 2,
+             "artist": ["Liz Kim Cương"],
+             "view": "3900",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/c/a/9/0/ca9053bbf35dccd8d8638399d2ab213c.jpg"
+            },
+            {
+             "name": "Chẳng Thể Giữ Lấy Chẳng Đành Buông Tay1",
+             "rank": 2,
+             "artist": ["Ngô Kiến Huy"],
+             "view": "4086",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/a/6/2/9/a62907bcb56701101dba260f40b8267f.jpg"
+            },
+            {
+             "name": "Em Cần Một Người Quan Tâm1",
+             "rank": 2,
+             "artist": ["Liz Kim Cương"],
+             "view": "3900",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/c/a/9/0/ca9053bbf35dccd8d8638399d2ab213c.jpg"
+            }
+          ]
+        },
+        {
+          "tabTitle": "US-UK",
+          "values": [
+            {
+             "name": "Hawái (Official Video)",
+             "rank": 1,
+             "artist": ["Maluma"],
+             "view": "",
+             "img": "https://photo-zmp3.zadn.vn/banner/a/4/a/d/a4ad13ff8350b70669f98d8040246917.jpg",
+             "imgUrl": ""
+            },
+            {
+             "name": "Ice Cream (with Selena Gomez)",
+             "rank": 2,
+             "artist": ["BLACKPINK", "Selena Gomez"],
+             "view": "",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/c/b/9/9/cb9994ca717d27acb56c634e58eb1226.jpg"
+            },
+            {
+             "name": "WAP",
+             "rank": 3,
+             "artist": ["Cardi B", "Megan Thee Stallion"],
+             "view": "",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/7/f/f/4/7ff411911300a6d09aa8d40681e2531b.jpg"
+            },
+            {
+             "name": "Ice Cream (with Selena Gomez)1",
+             "rank": 2,
+             "artist": ["BLACKPINK", "Selena Gomez"],
+             "view": "",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/c/b/9/9/cb9994ca717d27acb56c634e58eb1226.jpg"
+            },
+            {
+             "name": "WAP1",
+             "rank": 3,
+             "artist": ["Cardi B", "Megan Thee Stallion"],
+             "view": "",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/7/f/f/4/7ff411911300a6d09aa8d40681e2531b.jpg"
+            }
+          ]
+        },
+        {
+          "tabTitle": "K-POP",
+          "values": [
+            {
+             "name": "Hawái (Official Video)",
+             "rank": 1,
+             "artist": ["Maluma"],
+             "view": "",
+             "img": "https://photo-zmp3.zadn.vn/banner/a/4/a/d/a4ad13ff8350b70669f98d8040246917.jpg",
+             "imgUrl": ""
+            },
+            {
+             "name": "Ice Cream (with Selena Gomez)",
+             "rank": 2,
+             "artist": ["BLACKPINK", "Selena Gomez"],
+             "view": "",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/c/b/9/9/cb9994ca717d27acb56c634e58eb1226.jpg"
+            },
+            {
+             "name": "WAP",
+             "rank": 3,
+             "artist": ["Cardi B", "Megan Thee Stallion"],
+             "view": "",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/7/f/f/4/7ff411911300a6d09aa8d40681e2531b.jpg"
+            },
+            {
+             "name": "Ice Cream (with Selena Gomez)1",
+             "rank": 2,
+             "artist": ["BLACKPINK", "Selena Gomez"],
+             "view": "",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/c/b/9/9/cb9994ca717d27acb56c634e58eb1226.jpg"
+            },
+            {
+             "name": "WAP1",
+             "rank": 3,
+             "artist": ["Cardi B", "Megan Thee Stallion"],
+             "view": "",
+             "img": "",
+             "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/7/f/f/4/7ff411911300a6d09aa8d40681e2531b.jpg"
+            }
+          ]
+        }
+      ]
+    },
+  
+    "todayList": {
+      "title": "VUI VẺ MỖI NGÀY",
+      "imgH": 150,
+      "list": [
+        {
+          "name": "Nhạc V-Pop Đầy Hứa Hẹn",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/6/d/d/c/6ddc24505f9bb3e7072c8a6982789bbf.jpg"
+        },
+        {
+          "name": "Cảm Hứng Cho Tinh Thần",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/4/2/7/2/427264a4a66d8a2fb43da8c3b0d118e0.jpg"
+        },
+        {
+          "name": "Các Ca Khúc Pop Ballad Việt Nổi Bật 2020",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/2/4/8/0/248057f542641f7e06f22c0e61c534a4.jpg"
+        },
+        {
+          "name": "Những Giai Điệu V-Pop Tươi Vui",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/f/5/d/8/f5d8700f443e785352948b2d4a618bed.jpg"
+        },
+        {
+          "name": "Nam Thần Nhạc Việt",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/0/d/4/7/0d471ecfe7fdcadb5bcf6e45417cbf69.jpg"
+        },
+        {
+          "name": "USUK Nhạc Rap/Hip Hop Nổi Bật 2020",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/8/7/8/f/878f030e9733f009a6acf0edd84c78ca.jpg"
+        },
+        {
+          "name": "Thanh Xuân Của Chúng Ta!",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/6/1/5/0/61509f49bad112bda52c964571536b2f.jpg"
+        },
+        {
+          "name": "Indie Mixtape",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/7/1/1/d/711d7362ba0870cbe64d0d7a36cff0f6.jpg"
+        }
+      ]
+    },
+  
+    "videoHot": {
+      "title": "VIDEO HOT",
+      "imgH": 80,
+      "list": [
+        {
+          "name": "Khẽ Thôi Em",
+          "artist": "GiGun",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/1/1/d/d/11ddc1cfe351d8a5169a330b781819c0.jpg"
+        },
+        {
+          "name": "Đánh Mất Em",
+          "artist": "Quang Đăng Trần",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/1/5/0/c/150c5e9c3780177b3f5f34d24d3903e4.jpg"
+        },
+        {
+          "name": "Em Cần Một Người Quan Tâm",
+          "artist": "Liz Kim Cương",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/c/a/9/0/ca9053bbf35dccd8d8638399d2ab213c.jpg"
+        },
+        {
+          "name": "Sao Người Ta Nỡ Làm Mình Đau",
+          "artist": "Gil Lê",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/2/7/e/a/27ead6f31ed3023a6b6a239ff263ff0b.jpg"
+        },
+        {
+          "name": "Bạn Cấp 3",
+          "artist": "Lou Hoàng",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/9/7/c/2/97c26cf234609072e4003d5174d03d3d.jpg"
+        },
+        {
+          "name": "Mình Đi Cùng Nhau",
+          "artist": "K-ICM",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/e/e/1/a/ee1a2c82d6602037b3b6078e2b293c43.jpg"
+        },
+        {
+          "name": "Missing You",
+          "artist": "Phương Ly",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/a/5/e/9/a5e9a45eb6e000b91f3407530789ade4.jpg"
+        },
+        {
+          "name": "Bỏ Lỡ Một Người",
+          "artist": "Lê Bảo Bình",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/7/3/7/9/7379380330e0e795ce61bba271400506.jpg"
+        },
+        {
+          "name": "Cô Rô Na Tránh Ra Nha",
+          "artist": "Nhiều nghệ sĩ",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/9/1/3/1/91314b0cff8fe7da096cc150d7fda169.jpg"
+        },
+        {
+          "name": "Ngày Trở Về Hạnh Phúc",
+          "artist": "Hồ Nhật Huy",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/a/3/1/3/a313c7769b424050481bc27cd6e1908a.jpg"
+        },
+        {
+          "name": "Chúng Ta Phải Lòng Nhau Chưa",
+          "artist": "Alex Dương",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/e/c/d/d/ecdd9bb28784b1423e27e7224dee8aaf.jpg"
+        },
+        {
+          "name": "Về Gặp Nhau Một Lần",
+          "artist": "T-Pame",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r16x9_jpeg/thumb_video/3/4/d/0/34d0ae605e84ed2b31d96ed4b7e1e15a.jpg"
+        }
+      ]
+    },
+  
+    "albumHot": {
+      "title": "ALBUM HOT",
+      "imgH": 150,
+      "list": [
+        {
+         "name": "Kẻ Tương Tư (Single)",
+         "artist": "Trung Tự",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/9/9/6/c/996c529742d9f2101ef58790da95c27d.jpg"
+        },
+        {
+         "name": "Cô Ta (Single)",
+         "artist": "JK Dương Tiên",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/3/7/6/d/376d5fc6957d3ca3b21eb67edc2aa02b.jpg"
+        },
+        {
+         "name": "Kẻ Điên Tin Vào Tình Yêu (Lofi Version)",
+         "artist": "Lil Zpoet",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/a/f/e/a/afea9e0d6bc78935da16cc148d62cd80.jpg"
+        },
+        {
+         "name": "Tình Sâu Đậm, Mưa Mịt Mù (Cover) (Single)",
+         "artist": "Juky San",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/5/6/9/0/569028e5bc07eab1a20d0cae001e8f20.jpg"
+        },
+        {
+         "name": "Hãy Cho Anh Ngỏ Lời (Single)",
+         "artist": "Mai Tiến Dũng",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/9/b/2/0/9b209da47a5e85cf7701b04dd9664992.jpg"
+        },
+        {
+         "name": "Đánh Mất Em (Giã Từ Biệt Ly) (Single)",
+         "artist": "Huy Vạc",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/a/2/1/5/a2153051765099db869499d209f85c81.jpg"
+        },
+        {
+         "name": "021 (Single)",
+         "artist": "Binz",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/c/5/6/6/c566d162bef8d7e7bac56a10e67ab8f9.jpg"
+        },
+        {
+         "name": "Em Cần Một Người Quan Tâm (Single)",
+         "artist": "Liz Kim Cương",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/3/2/2/3/32233fec314e9ca715a17a471946cc20.jpg"
+        },
+        {
+         "name": "Đánh Mất Em (Single)",
+         "artist": "Quang Đăng Trần",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/8/3/6/9/83690ac46c2ba7cf46b153e6226c974d.jpg"
+        },
+        {
+         "name": "Khác Biệt (Single)",
+         "artist": "Khắc Việt",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/e/7/c/d/e7cd71a24091291a85e40062d78fb3b0.jpg"
+        },
+        {
+         "name": "Chưa Hề Dừng Lại (Single)",
+         "artist": "Elly Trần",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/4/3/9/e/439e0dfbf5db7f824e1dc46d4b027a29.jpg"
+        },
+        {
+         "name": "THE ALBUM",
+         "artist": "BLACKPINK",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/0/0/4/1/0041083628270504efdb6499396aacea.jpg"
+        }
+      ]
+    },
+  
+    "listening": [
+      {
+       "name": "Mine",
+       "artist": "Phoebe Ryan",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
+       "time": "03:47",
+       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Mine.mp3?alt=media&token=f72b7774-a70e-4d2e-a0b4-1bb542d90aed",
+       "stt": 1
+      },
+      {
+       "name": "All We Know",
+       "artist": "The Chainsmokers, Phoebe Ryan",
+       "imgUrl": "https://avatar-nct.nixcdn.com/song/2018/10/16/e/7/6/4/1539671016316.jpg",
+       "time": "03:14",
+       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/The%20Chainsmokers%2C%20Phoebe%20Ryan%20%E2%80%93%20All%20We%20Know.mp3?alt=media&token=b23ef9a0-8137-499e-8de1-528573cb3a02",
+       "stt": 2
+      },
+      {
+       "name": "Dead",
+       "artist": "Phoebe Ryan",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
+       "time": "03:40",
+       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Dead.mp3?alt=media&token=cf9d427f-6bcc-41f4-841e-7b576790455c",
+       "stt": 3
+      },
+      {
+       "name": "Homie",
+       "artist": "Phoebe Ryan",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
+       "time": "03:17",
+       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Homie.mp3?alt=media&token=f78a9e29-c8b3-47be-91ed-7f4fbcad340b",
+       "stt": 4
+      },
+      {
+       "name": "IgnitionDo You…",
+       "artist": "Phoebe Ryan",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
+       "time": "03:47",
+       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Ignition-Do%20You....mp3?alt=media&token=cb303d14-0086-482c-9eb0-7fd202a9fa2c",
+       "stt": 5
+      }
+    ],
+  
+    "nvHotData": {
+      "title": "NHẠC VIỆT HOT >",
+      "list": [
+        {
+          "name": "Ai Là Người Thương Em (Remix)",
+          "artist": "Quân A.P",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/f/9/9/2/f9923bfd4debb93b6dc03d5d087b22d7.jpg"
+        },
+        {
+          "name": "Bé Ơi",
+          "artist": "ImD, Phú Quí, CM1X",
+          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/d/0/f/f/d0ffc6c85c87a67a5d7f53470b43ead6.jpg"
+        },
+        {
+         "name": "Bông Hoa Lụi Tàn",
+         "artist": "Hiếu Adobe",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/d/9/8/2/d9825303a1a191f2cb6110ea1a125eb5.jpg"
+        },
+        {
+         "name": "Nếu Sớm Mai Là Hôm Nay",
+         "artist": "SoHo, Lena",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/e/4/1/5/e41575a5b197cdfbc8fed97523c3ab05.jpg"
+        },
+        {
+         "name": "Nếu Em Hết Thương Rồi",
+         "artist": "Nếu Em Hết Thương Rồi",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/5/9/c/d/59cdd58c8b01d41a23aaa550713af76d.jpg"
+        },
+        {
+         "name": "Yêu Nhiều Ghen Nhiều",
+         "artist": "Thanh Hưng",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/f/5/f/f/f5ffd0d29aa8543610eef215e2bdadef.jpg"
+        },
+        {
+         "name": "Nắm",
+         "artist": "Minh Vương M4U, Hương Ly",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/6/5/b/a/65ba8ded0743d086ee4c756247115319.jpg"
+        },
+        {
+         "name": "Hoa Vô Sắc",
+         "artist": "Jack",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/6/f/f/3/6ff330930e726af162d634a749b2d4eb.jpg"
+        },
+        {
+         "name": "Cô Đơn Không Muốn Về Nhà",
+         "artist": "Mr Siro",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/e/a/a/7/eaa7be597e6a5476336affd96ca5eab3.jpg"
+        },
+        {
+         "name": "Tết Đong Đầy 2",
+         "artist": "Khoa, Lăng TD",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/e/d/d/d/edddf61a159cfa5d21d80b22ae13fc8a.jpg"
+        }
+      ]
+    },
+  
+    "phoebe": {
+      "title": "Nhạc của Phoebe Ryan",
+      "list": [
+        {
+         "name": "Phoebe Ryan",
+         "artist": "160 quan tâm",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/8/1/8136ee69a1ef294e394174624bb9b94b_1508410109.jpg"
+        },
+        
+        {
+         "name": "Những Bài Hát Hay Nhất Của Phoebe Ryan",
+         "artist": "Phoebe Ryan",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/avatars/b/7/e/5/b7e52d80095adce7ec0aadcee6bf9618.jpg"
+        },
+        {
+         "name": "Be Real - Remixes",
+         "artist": "Phoebe Ryan",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/e/4/6/b/e46bbc9a076e507f5b4f4b6be8cd30ea.jpg"
+        },
+        {
+         "name": "Dark Side (Remixed)",
+         "artist": "Phoebe Ryan",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/3/f/a/d/3fad6baffd8a3549808485858b38b723.jpg"
+        },
+        {
+         "name": "Phoebe Ryan",
+         "artist": "160 quan tâm",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/8/1/8136ee69a1ef294e394174624bb9b94b_1508410109.jpg"
+        },
+        
+        {
+         "name": "Những Bài Hát Hay Nhất Của Phoebe Ryan",
+         "artist": "Phoebe Ryan",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/avatars/b/7/e/5/b7e52d80095adce7ec0aadcee6bf9618.jpg"
+        },
+        {
+         "name": "Be Real - Remixes",
+         "artist": "Phoebe Ryan",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/e/4/6/b/e46bbc9a076e507f5b4f4b6be8cd30ea.jpg"
+        },
+        {
+         "name": "Dark Side (Remixed)",
+         "artist": "Phoebe Ryan",
+         "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/3/f/a/d/3fad6baffd8a3549808485858b38b723.jpg"
+        }
+      ]
+    },
+  
+    "topFiveData": [
+      {
+       "rank": 1,
+       "name": "Hoa Hải Đường",
+       "artist": "Jack",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/a/8/6/2/a8626a5671f5a01250a074c4c8140cae.jpg",
+       "view": "50,080"
+      },
+      {
+       "rank": 2,
+       "name": "Bông Hoa Đẹp Nhất",
+       "artist": "Quân A.P",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/f/8/1/e/f81efd92fa9a3d52eb37f3b867ab9d32.jpg",
+       "view": "35,559"
+      },
+      {
+       "rank": 3,
+       "name": "Đánh Mất Em",
+       "artist": "Quang Trần Đặng",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/8/3/6/9/83690ac46c2ba7cf46b153e6226c974d.jpg",
+       "view": "24,390"
+      },
+      {
+       "rank": 4,
+       "name": "Anh Mệt Rồi",
+       "artist": "Anh Quân idol",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/2/d/7/d/2d7d033ca7c2a381748e7fb9dc6aa186.jpg",
+       "view": "23,512"
+      },
+      {
+       "rank": 5,
+       "name": "Ai Mang Cô Đơn Đi",
+       "artist": "K-ICM, APJ",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/0/1/5/1/0151bcc5dc64312a9b6d9d2245aab54c.jpg",
+       "view": "21,286"
+      }
+    ]
+  }
+}

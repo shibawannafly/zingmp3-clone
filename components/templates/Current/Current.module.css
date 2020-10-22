@@ -1,8 +1,14 @@
 .current {
+  height: 1200px;
+}
+
+.stickyContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: sticky;
+  top: 30px;
 }
 
 .name {

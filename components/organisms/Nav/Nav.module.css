@@ -81,8 +81,9 @@
 }
 
 .menuContainerCol li {
-  margin: 0 20px;
+  margin: 0px 20px;
   width: 120px; 
+  height: 32px;
 }
 
 

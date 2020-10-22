@@ -10,5 +10,5 @@
 
 .rightSide {
   grid-column: 2 / 5;
-  padding: 20px 0;
+  padding: 20px 0 0 10px;
 }
