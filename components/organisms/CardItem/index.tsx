@@ -14,7 +14,7 @@ const CardItem: React.FC<Props> = ({ imgUrl, name, artist, imgH }: Props) => {
 
   return (
     <div className={styles.cardItem}>
-      <Figure imgUrl={imgUrl} h={imgH} w={150} showPlay={true} iconSize={40} />
+      <Figure imgUrl={imgUrl} h={imgH} w={150} showPlay={true} iconSize={40} name={name}/>
       <SongInfo name={name} artist={artist} />
     </div>
   )

@@ -21,6 +21,7 @@ const NVItem:React.FC<Props> = ({imgUrl, name, artist, showOption}: Props) => {
           w={50} h={50}
           showPlay={true}
           iconSize={20}
+          name={name}
         />
         <SongInfo
           name={name}

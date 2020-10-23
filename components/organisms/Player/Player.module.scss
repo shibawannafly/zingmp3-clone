@@ -1,0 +1,115 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playerWrapper {
+  position: fixed;
+  width: 100vw;
+  height: 70px;
+  bottom: 0;
+  left: 0;
+  background-image: url('https://zjs.zadn.vn/zmp3-desktop/releases/v0.2.5/images/bg-miniplayer-v1.png');
+  z-index: 100;
+
+  .player {
+    @include flex-center;
+    height: 100%;
+
+    span {
+      cursor: pointer;
+      color: #fff;
+      border-radius: 50%;
+
+      
+    }
+
+    .controls {
+      @include flex-center;
+      padding: 0 40px 0 0;
+
+      .prev, .next {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size: 24px;
+        @include flex-center;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+
+      .playPause {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 24px;
+        margin: 0 15px;
+        border: 2px solid #fff;
+        @include flex-center;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+
+      span {
+        color: #fff;
+      }
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 350px;
+      height: 100%;
+      color: #fff;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+
+      .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 300px;
+        height: 100%;
+        padding: 0 6px;
+
+        .content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 0 6px;
+          font-size: 12px;
+          opacity: 0.9;
+
+          .duration {
+            font-size: 10px;
+          }
+        }
+
+        .playProcess {
+          width: 100%;
+        }
+      }
+      
+    }
+
+
+    .features {
+      @include flex-center;
+    }
+  }
+}

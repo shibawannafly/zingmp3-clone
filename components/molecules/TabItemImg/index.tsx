@@ -49,6 +49,7 @@ const TabItemImg:React.FC<Props> = ({ rank, name, artist, view, img, imgUrl, h }
               w={110}
               showPlay={true}
               iconSize={30}
+              name={name}
             />
           ) }
           <div className={styles.infoDetail}>

@@ -1,10 +1,13 @@
 import React, {useEffect} from 'react'
 import Head from 'next/head'
 import Layout from '../../components/templates/Layout'
-import styles from './songPage.module.css'
 import Listening from '../../components/templates/Listening'
 import Current from '../../components/templates/Current'
 import Relate from '../../components/templates/Relate'
+import Player from '../../components/organisms/Player'
+
+import styles from './songPage.module.css'
+
 import {useSelector, connect, useDispatch} from 'react-redux'
 import { FETCH_DATA } from '../../redux/actions/actions'
 import { playMusic } from '../../redux/actions/musicAction'
@@ -43,6 +46,12 @@ const User:React.FC = ({fetchData}: any) => {
           <Relate title={phoebe.title} list={phoebe.list} />
           <Relate title={phoebe.title} list={phoebe.list} />
         </section>
+        <Player
+          name='All We Know'
+          artist='The Chainsmokers, Phobe Ryan'
+          imgUrl='https://avatar-nct.nixcdn.com/song/2018/10/16/e/7/6/4/1539671016316.jpg'
+          songUrl='https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Might%20%2B%20U%20-%20My%20Hero%20Academia%20Heroes%20Rising%20OST.mp3?alt=media&token=4a8007da-7fc5-4203-b849-0338264e1fc7'
+        />
       </main>
     </Layout>
   )

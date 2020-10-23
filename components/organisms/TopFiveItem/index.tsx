@@ -30,6 +30,7 @@ const TopFiveItem:React.FC<Props> = ({rank, imgUrl, name, artist, view, iconSize
             showPlay={true}
             w={60} h={60}
             iconSize={iconSize}
+            name={name}
           />
           <SongInfo
             name={name}
