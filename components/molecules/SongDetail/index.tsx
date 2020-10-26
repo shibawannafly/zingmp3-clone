@@ -10,10 +10,11 @@ type Props = {
   type: any,
   icon: string,
   songUrl: string,
-  music?: boolean
+  music?: boolean,
+  duration?:string
 }
 
-const SongDetail:React.FC<Props> = ({name, artist, imgUrl, type, icon, songUrl, music}: Props) => {
+const SongDetail:React.FC<Props> = ({name, artist, imgUrl, type, icon, songUrl, music, duration}: Props) => {
 
   return (
     <div className={styles.songDetail}>
@@ -26,6 +27,7 @@ const SongDetail:React.FC<Props> = ({name, artist, imgUrl, type, icon, songUrl, 
         songUrl={songUrl}
         iconSize={20}
         music={music}
+        duration={duration}
       />
       <SongInfo
         name={name}

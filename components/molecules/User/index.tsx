@@ -2,7 +2,11 @@ import React from 'react'
 import styles from './User.module.scss'
 import {Dropdown, Button, Menu} from 'antd'
 
-const User:React.FC = ({logoutUser}: any) => {
+type Props = {
+  logoutUser: () => void
+}
+
+const User:React.FC<Props> = ({logoutUser}: Props) => {
 
   return (
     <div className={styles.user}>

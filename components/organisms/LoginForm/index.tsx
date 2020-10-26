@@ -1,9 +1,14 @@
 import React from 'react'
 import styles from './LoginForm.module.scss'
 import {useForm, Controller} from 'react-hook-form'
-import { Input as AntdInput, Form, Button, Alert } from "antd";
+import { Input as AntdInput, Button, Alert } from "antd";
 
-const LoginForm:React.FC = ({closeForm, handleLogin}: any) => {
+type Props = {
+  closeForm: () => void,
+  handleLogin: () => void
+}
+
+const LoginForm:React.FC<Props> = ({closeForm, handleLogin}: Props) => {
 
   const { control, handleSubmit, errors } = useForm()
 

@@ -1,57 +1,75 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import styles from './Player.module.scss'
 import {
   StepBackwardOutlined,
   StepForwardOutlined,
-  CaretRightOutlined,
-  PauseOutlined,
   HeartOutlined,
   MoreOutlined
 } from '@ant-design/icons'
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 import VolumeDownIcon from '@material-ui/icons/VolumeDown';
 import VolumeOffIcon from '@material-ui/icons/VolumeOff';
-
+import { PlayIcon, PauseIcon, LoopIcon, RandomIcon, MicroIcon } from '../../atoms/Icon'
 import {Slider} from 'antd'
+import { connect } from 'react-redux'
 
-type Props = {
-  name: string,
-  artist: string,
-  imgUrl: string,
-  songUrl: string
-}
+import useKeyPress from '../../../hooks/useKeyPress'
 
-const Player: React.FC<Props> = ({name, artist, imgUrl, songUrl}: Props) => {
+
+const Player: React.FC = ({listening, isRun, handlePlayMusic}: any) => {
   const audioRef = useRef(null) 
 
-  const [duration, setDuration] = useState(0)
   const [currentTime, setCurrentTime] = useState(0)
-  const [isPlay, setPlay] = useState(false)
-  const [volumn, setVolumn] = useState(1)
+  // const [isPlay, setPlay] = useState(false)
+  const [durString, setDurString] = useState('--:--')
+  const [volumeIcon, setVolumeIcon] = useState(true)
+  const [volume, setVolume] = useState(100)
+  const [loop, setLoop] = useState(false)
 
-  const handleLoadedData = () => {
-    console.log(audioRef.current.duration)
-    setDuration(audioRef.current.duration)
-    if(isPlay) audioRef.current.play()
-  }
+  const keyM = useKeyPress('m')
+  useEffect(() => {
+    if(keyM){
+      if(volumeIcon){
+        audioRef.current.volume = 0
+      } else {
+        audioRef.current.volume = 1
+      }
+      setVolumeIcon(!volumeIcon)
+    }
+  }, [keyM])
+
+
+  // const handleLoadedData = () => {
+    // console.log(audioRef.current.duration)
+    // setDurString(formatDuration(audioRef.current.duration))
+    // setDuration(audioRef.current.duration)
+    // if(isPlay) audioRef.current.play()
+  // }
+
+  const {name, artist, imgUrl, songUrl, duration} = listening
+
+  useEffect(() => {
+    if(duration){
+      let arr = duration.split(':')
+      setDurString(String(Number(arr[0]) * 60 + Number(arr[1])))
+    }
+    isRun ? audioRef.current.play() : audioRef.current.pause();
+  }, [duration, isRun])
 
   const handleTimeSliderChange = (value) => {
     audioRef.current.currentTime = value
     setCurrentTime(value)
-    if(!isPlay){
-      setPlay(true)
+    if(!isRun){
+      handlePlayMusic(true)
       audioRef.current.play()
     }
   }
 
   const handlePausePlayClick = () => {
-    if (isPlay) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-    setPlay(!isPlay);
+    handlePlayMusic(!isRun);
   } 
+
+  
 
   const formatDuration = (dur:number) => {
     let minute:any = Math.floor(dur / 60)
@@ -61,36 +79,72 @@ const Player: React.FC<Props> = ({name, artist, imgUrl, songUrl}: Props) => {
     return `${minute}:${second}`
   }
 
+  const handleChangeVolume = value => {
+    setVolume(value)
+    // volume in range 0 - 1
+    audioRef.current.volume = value / 100
+    if(value === 0){
+      setVolumeIcon(false)
+    } else {
+      setVolumeIcon(true)
+    }
+  }
+
+  const handleToggleVolume = () => {
+    if(volumeIcon){
+      audioRef.current.volume = 0
+    } else {
+      audioRef.current.volume = volume / 100
+    }
+    setVolumeIcon(prev => !prev)
+  }
+
+  const handleLoop = () => {
+    audioRef.current.loop = !audioRef.current.loop
+    setLoop(audioRef.current.loop)
+  }
+
   return (
     <section className={styles.playerWrapper}>
       <div className={styles.player}>
         <div className={styles.controls}>
-          <div className={styles.prev}>
+          <div className={styles.controlBtn}>
             <StepBackwardOutlined/>
           </div>
           <div className={styles.playPause} onClick={handlePausePlayClick}>
             {
-              isPlay ? 
-                <PauseOutlined />
-              : <CaretRightOutlined />
-            }
+              isRun ? 
+                <PauseIcon/>
+              : 
+                <PlayIcon />
+            } 
           </div>
-          <div className={styles.next}>
+          <div className={styles.controlBtn}>
             <StepForwardOutlined />
           </div>
+          
+          <div className={`${styles.controlBtn} ${loop ? styles.loop : ''}`} 
+            onClick={handleLoop} >
+            <LoopIcon />
+          </div>
+
+          <div className={styles.controlBtn}>
+            <RandomIcon />
+          </div>
+
         </div>
 
         <div className={styles.details}>
           <img src={imgUrl} alt="player-img"/>
           <div className={styles.info}>
             <div className={styles.content}>
-              <div className={styles.songName}>{name}</div>
-              <div className={styles.duration}>{formatDuration(currentTime)} / {formatDuration(duration)}</div>
+              <div className={styles.songName}>{name} - {artist}</div>
+              <div className={styles.duration}>{formatDuration(currentTime)} / {formatDuration(Number(durString))}</div>
             </div>
             <div className={styles.playProcess}>
               <Slider
                 min={0}
-                max={duration}
+                max={Number(durString)}
                 onChange={handleTimeSliderChange}
                 value={currentTime}
                 step={1} style={{margin: '2px 6px'}}
@@ -99,31 +153,55 @@ const Player: React.FC<Props> = ({name, artist, imgUrl, songUrl}: Props) => {
               <audio 
                 src={songUrl}
                 ref={audioRef}
-                onLoadedData={handleLoadedData}
+                // onLoadedData={handleLoadedData}
                 onTimeUpdate={() => setCurrentTime(audioRef.current.currentTime)}
-                onEnded={() => setPlay(false)}
+                onEnded={() => handlePlayMusic(false)}
               />
           </div>
         </div>
 
         <div className={styles.features}>
-          <HeartOutlined />
-          <div className={styles.volumnController}>
-            <VolumeUpIcon/>
-            <Slider 
-              vertical
-              min={0}
-              max={100}
-              step={1}
-              value={100}
-            />
+          <div className={styles.featuresBtn}>
+            <HeartOutlined />
           </div>
-          <MoreOutlined style={{transform: 'rotate(90deg)'}}/>
-        </div>
+          <div className={styles.featuresBtn}>
+            {
+              volumeIcon ? 
+                <VolumeUpIcon style={{color: '#fff', fontSize: 20}} onClick={handleToggleVolume} />
+              : <VolumeOffIcon style={{color: '#fff', fontSize: 20}} onClick={handleToggleVolume} />
+            }
+             
+            <div className={styles.volumeSlider}>
+              <Slider 
+                vertical
+                min={0}
+                max={100}
+                step={1}
+                defaultValue={volume}
+                onChange={handleChangeVolume}
+                style={{height: '100%', margin: 'auto'}}
+              />
+            </div>
+          </div>
+
+          <div className={styles.featuresBtn}>
+            <MicroIcon/>
+          </div>
+          
+          <div className={styles.featuresBtn}>
+            <MoreOutlined style={{transform: 'rotate(90deg)'}}/>
+          </div>
+        </div> 
       </div>
 
     </section>
   )
 }
 
-export default Player
+const mapStateToProps = state => {
+  return {
+    listening: state.musicReducer.listening
+  }
+}
+
+export default connect(mapStateToProps, null)(Player)

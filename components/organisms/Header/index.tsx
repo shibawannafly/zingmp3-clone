@@ -3,6 +3,7 @@ import { Layout, Input } from "antd";
 import styles from "./Header.module.scss";
 import LoginForm from '../LoginForm'
 import User from '../../molecules/User'
+import Link from 'next/link'
 
 const { Search } = Input;
 
@@ -16,11 +17,16 @@ const MenuHeader:React.FC = () => {
   const handleCloseForm = () => setShowForm(false)
   const handleLogin = () => setIsLogin(true)
   const handleLogout = () => setIsLogin(false)
+  
 
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <img src="/images/logo.png" alt="logo"/>
+        <Link href='/'>
+          <a>
+            <img src="/images/logo.png" alt="logo"/>
+          </a>
+        </Link>
         <menu className={styles.menuList}>
           <Search
             placeholder="Nhập nội dung cần tìm"

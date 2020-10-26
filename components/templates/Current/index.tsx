@@ -5,18 +5,19 @@ import styles from './Current.module.scss'
 import {PauseOutlined, CaretRightFilled} from '@ant-design/icons'
 import { connect, useSelector } from 'react-redux'
 
-const Current:React.FC = () => {
-  const [isRun, setIsRun] = useState(false)
+
+const Current:React.FC = ({isRun, handlePlayMusic}: any) => {
+  // const [isRun, setIsRun] = useState(false)
   const audioRef = useRef(null)
   const listening = useSelector(state => state.musicReducer.listening)
 
-  const handlePlayMusic = () => {
-    setIsRun(isRun => !isRun)
-  }
+  // const handlePlayMusic = () => {
+  //   setIsRun(isRun => !isRun)
+  // }
 
-  useEffect(() => {
-    isRun ? audioRef.current.play() : audioRef.current.pause()
-  }, [isRun, listening])
+  // useEffect(() => {
+  //   isRun ? audioRef.current.play() : audioRef.current.pause()
+  // }, [isRun, listening])
 
   const {name, artist, imgUrl, songUrl} = listening
 
@@ -32,8 +33,8 @@ const Current:React.FC = () => {
             w={280} h={280}
             iconSize={45} name={name} artist={artist}
           />
-          <audio ref={audioRef} style={{display: 'none'}} src={songUrl}>
-          </audio>
+          {/* <audio ref={audioRef} style={{display: 'none'}} src={songUrl}>
+          </audio> */}
         </div>
         <div className={styles.name}>{name}</div>
         <div className={styles.artist}>{artist}</div>

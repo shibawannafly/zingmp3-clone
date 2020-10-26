@@ -14,10 +14,11 @@ type Props = {
   time: string,
   stt: any,
   songUrl: string,
-  music?: boolean
+  music?: boolean,
+  duration?:string
 }
 
-const SongItem:React.FC<Props> = ({name, artist, imgUrl, type, icon, time, stt, songUrl, music}: Props) => {
+const SongItem:React.FC<Props> = ({name, artist, imgUrl, type, icon, time, stt, songUrl, music, duration}: Props) => {
   const box = <MoreBox
     name={name}
     artist={artist}
@@ -37,6 +38,7 @@ const SongItem:React.FC<Props> = ({name, artist, imgUrl, type, icon, time, stt, 
             icon={icon}
             songUrl={songUrl}
             music={music}
+            duration={duration}
           />
         </div>
         <div className={styles.time}> {time} </div>

@@ -29,15 +29,19 @@
       @include flex-center;
       padding: 0 40px 0 0;
 
-      .prev, .next {
+      .controlBtn {
         width: 30px;
         height: 30px;
         border-radius: 50%;
         font-size: 24px;
+        margin: 0 6px;
+        cursor: pointer;
         @include flex-center;
-        &:hover {
+        &:hover, &.loop {
           background-color: rgba(255, 255, 255, 0.2);
         }
+
+
       }
 
       .playPause {
@@ -45,8 +49,9 @@
         height: 40px;
         border-radius: 50%;
         font-size: 24px;
-        margin: 0 15px;
+        margin: 0 5px;
         border: 2px solid #fff;
+        cursor: pointer;
         @include flex-center;
         &:hover {
           background-color: rgba(255, 255, 255, 0.2);
@@ -71,9 +76,10 @@
         height: 50px;
         border-radius: 5px;
         cursor: pointer;
-
+        transition: 0.3s;
         &:hover {
           transform: scale(1.02);
+          transition: 0.3s;
         }
       }
 
@@ -84,16 +90,23 @@
         flex-direction: column;
         width: 300px;
         height: 100%;
-        padding: 0 6px;
+        padding: 0 10px;
 
         .content {
           display: flex;
           justify-content: space-between;
           align-items: center;
           width: 100%;
-          padding: 0 6px;
+          padding: 0 6px 0 0;
           font-size: 12px;
           opacity: 0.9;
+
+          .songName {
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
 
           .duration {
             font-size: 10px;
@@ -110,6 +123,43 @@
 
     .features {
       @include flex-center;
+
+      .featuresBtn{
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        font-size: 18px;
+        margin: 0 8px;
+        position: relative;
+        cursor: pointer;
+        @include flex-center;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+
+
+        .volumeSlider{
+          position: absolute;
+          display: none;
+          bottom: 100%;
+          left: 0;
+          height: 100px;
+          width: 26px;
+          text-align: center;
+          z-index: 101;
+          background-color: #2e2e2e;
+          border-radius: 4px;
+          padding: 12px 6px;
+        }
+
+        &:hover {
+          .volumeSlider{
+            display: block;
+             
+          }
+        }
+      }
     }
   }
 }

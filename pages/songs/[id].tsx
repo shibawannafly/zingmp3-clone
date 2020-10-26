@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect, useCallback} from 'react'
 import Head from 'next/head'
 import Layout from '../../components/templates/Layout'
 import Listening from '../../components/templates/Listening'
@@ -9,58 +9,123 @@ import Player from '../../components/organisms/Player'
 import styles from './songPage.module.css'
 
 import {useSelector, connect, useDispatch} from 'react-redux'
-import { FETCH_DATA } from '../../redux/actions/actions'
-import { playMusic } from '../../redux/actions/musicAction'
+import { FETCH_SONG_PAGE_DATA } from '../../redux/actions/musicAction'
+import { PLAY_MUSIC } from '../../redux/actions/musicAction'
 
-const User:React.FC = ({fetchData}: any) => {
+import useKeyPress from '../../hooks/useKeyPress'
 
+const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
+  const [isRun, setIsRun] = useState(false)
   const dispatch = useDispatch()
-
+  
   useEffect(() => {
-    fetchData()
-    dispatch(playMusic(
-      'Mine', 
-      'Phoebe Ryan', 
-      'https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg',
-      'https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Mine.mp3?alt=media&token=f72b7774-a70e-4d2e-a0b4-1bb542d90aed'
-    ))
+    fetchSongPageData()
   }, [])
 
-  const phoebe = useSelector(state => state.dataReducer.pageData.phoebe) || {}
-  
+  const handlePlayMusic = () => {
+    setIsRun(isRun => !isRun)
+  }
+
+  const findIndexOfListening = (listening, album) => {
+    let index = 0
+    album.forEach(item => {
+      if(item.name === listening.name)
+        index = album.indexOf(item)
+    })
+    return index
+  }
+
+  const ArrowLeft = useKeyPress('ArrowLeft')
+  const ArrowRight = useKeyPress('ArrowRight')
+  const KeyP = useKeyPress('p')
+
+  useEffect(() => {
+    if(ArrowLeft){
+      let index = findIndexOfListening(listening, album)
+      let prev = (index - 1 < 0) ? album.length - 1 : index - 1
+      dispatch({type: PLAY_MUSIC, payload: {...album[prev]}})
+    }
+    if(ArrowRight) {
+      let index = findIndexOfListening(listening, album)
+      let next = (index + 1 > album.length - 1) ? 0 : index + 1
+      dispatch({type: PLAY_MUSIC, payload: {...album[next]}})
+    }
+    if(KeyP) {
+      setIsRun(!isRun)
+    }
+  }, [ArrowLeft, ArrowRight, KeyP])
+
+  // const handleKeyPress = e => {
+  //   let index = findIndexOfListening(listening, album)
+  //   switch(e.keyCode){
+  //     case 80: // space, play/pause
+  //       setIsRun(!isRun)
+  //       return
+
+  //     case 37: // left arrow, prev song
+  //       let prev = (index - 1 < 0) ? album.length - 1 : index - 1
+  //       dispatch({type: PLAY_MUSIC, payload: {...album[prev]}})
+  //       return
+
+  //     case 39: // right arrow, next song
+  //       let next = (index + 1 > album.length - 1) ? 0 : index + 1
+  //       dispatch({type: PLAY_MUSIC, payload: {...album[next]}})
+
+  //     default: return
+  //   }
+  // }
+
+
+  const {album, phoebe} = songPageData
+
   return(
     <Layout >
       <Head>
         <title>Songs</title>
       </Head>
+      
+      {
+        typeof album !== 'undefined' ?
+        (<main className={styles.songPage} /*onKeyDown={handleKeyPress} tabIndex={0}*/>
 
-      <main className={styles.songPage}>
-        <section className={styles.leftSide}>
-          <Current/>
-        </section>
+          <section className={styles.leftSide}>
+            <Current
+              isRun={isRun}
+              handlePlayMusic={handlePlayMusic}
+            />
+          </section>
+  
+          <section className={styles.rightSide}>
+            <Listening/>
+            <Relate title={phoebe.title} list={phoebe.list} />
+            <Relate title={phoebe.title} list={phoebe.list} />
+            <Relate title={phoebe.title} list={phoebe.list} />
+            <Relate title={phoebe.title} list={phoebe.list} />
+          </section>
 
-        <section className={styles.rightSide}>
-          <Listening/>
-          <Relate title={phoebe.title} list={phoebe.list} />
-          <Relate title={phoebe.title} list={phoebe.list} />
-          <Relate title={phoebe.title} list={phoebe.list} />
-          <Relate title={phoebe.title} list={phoebe.list} />
-        </section>
-        <Player
-          name='All We Know'
-          artist='The Chainsmokers, Phobe Ryan'
-          imgUrl='https://avatar-nct.nixcdn.com/song/2018/10/16/e/7/6/4/1539671016316.jpg'
-          songUrl='https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Might%20%2B%20U%20-%20My%20Hero%20Academia%20Heroes%20Rising%20OST.mp3?alt=media&token=4a8007da-7fc5-4203-b849-0338264e1fc7'
-        />
-      </main>
+          <Player
+            isRun={isRun}
+            handlePlayMusic={handlePlayMusic}
+          />
+
+        </main>) : null
+      }
+      
     </Layout>
   )
 }
 
+const mapStateToProps = state => {
+  return {
+    songPageData: state.musicReducer.songPageData,
+    listening: state.musicReducer.listening
+  }; 
+}
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchData: () => dispatch({type: FETCH_DATA})
+    fetchSongPageData: () => dispatch({type: FETCH_SONG_PAGE_DATA})
   }
 }
-export default connect(null, mapDispatchToProps)(User)
+
+export default connect(mapStateToProps, mapDispatchToProps)(User) 

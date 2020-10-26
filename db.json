@@ -659,48 +659,7 @@
       ]
     },
   
-    "listening": [
-      {
-       "name": "Mine",
-       "artist": "Phoebe Ryan",
-       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
-       "time": "03:47",
-       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Mine.mp3?alt=media&token=f72b7774-a70e-4d2e-a0b4-1bb542d90aed",
-       "stt": 1
-      },
-      {
-       "name": "All We Know",
-       "artist": "The Chainsmokers, Phoebe Ryan",
-       "imgUrl": "https://avatar-nct.nixcdn.com/song/2018/10/16/e/7/6/4/1539671016316.jpg",
-       "time": "03:14",
-       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/The%20Chainsmokers%2C%20Phoebe%20Ryan%20%E2%80%93%20All%20We%20Know.mp3?alt=media&token=b23ef9a0-8137-499e-8de1-528573cb3a02",
-       "stt": 2
-      },
-      {
-       "name": "Dead",
-       "artist": "Phoebe Ryan",
-       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
-       "time": "03:40",
-       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Dead.mp3?alt=media&token=cf9d427f-6bcc-41f4-841e-7b576790455c",
-       "stt": 3
-      },
-      {
-       "name": "Homie",
-       "artist": "Phoebe Ryan",
-       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
-       "time": "03:17",
-       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Homie.mp3?alt=media&token=f78a9e29-c8b3-47be-91ed-7f4fbcad340b",
-       "stt": 4
-      },
-      {
-       "name": "IgnitionDo You…",
-       "artist": "Phoebe Ryan",
-       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
-       "time": "03:47",
-       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Ignition-Do%20You....mp3?alt=media&token=cb303d14-0086-482c-9eb0-7fd202a9fa2c",
-       "stt": 5
-      }
-    ],
+    
   
     "nvHotData": {
       "title": "NHẠC VIỆT HOT >",
@@ -758,6 +717,129 @@
       ]
     },
   
+
+  
+    "topFiveData": [
+      {
+       "rank": 1,
+       "name": "Hoa Hải Đường",
+       "artist": "Jack",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/a/8/6/2/a8626a5671f5a01250a074c4c8140cae.jpg",
+       "view": "50,080"
+      },
+      {
+       "rank": 2,
+       "name": "Bông Hoa Đẹp Nhất",
+       "artist": "Quân A.P",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/f/8/1/e/f81efd92fa9a3d52eb37f3b867ab9d32.jpg",
+       "view": "35,559"
+      },
+      {
+       "rank": 3,
+       "name": "Đánh Mất Em",
+       "artist": "Quang Trần Đặng",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/8/3/6/9/83690ac46c2ba7cf46b153e6226c974d.jpg",
+       "view": "24,390"
+      },
+      {
+       "rank": 4,
+       "name": "Anh Mệt Rồi",
+       "artist": "Anh Quân idol",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/2/d/7/d/2d7d033ca7c2a381748e7fb9dc6aa186.jpg",
+       "view": "23,512"
+      },
+      {
+       "rank": 5,
+       "name": "Ai Mang Cô Đơn Đi",
+       "artist": "K-ICM, APJ",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/0/1/5/1/0151bcc5dc64312a9b6d9d2245aab54c.jpg",
+       "view": "21,286"
+      }
+    ],
+
+    "hotArtist": [
+      {
+        "name": "Bùi Anh Tuấn",
+        "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/4/1/41f229e867c3787ed1ddee90a4bd2bbb_1506073807.jpg#home_hotartist_01"
+      },
+      {
+        "name": "Hương Tràm",
+        "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/b/f/b/9/bfb9522fe78758e81dfcb4b70d3f8f52.jpg#home_hotartist_02"
+      },
+      {
+        "name": "Chi Dân",
+        "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/e/6/8/7/e687a5d265bd19b32da2fc5084e4314c.jpg#home_hotartist_03"
+      },
+      {
+        "name": "Justatee",
+        "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/3/a/6/d/3a6de9f068f10fcee2c50cdf9772ebaa.jpg#home_hotartist_04"
+      },
+      {
+        "name": "Lê Hiếu",
+        "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/f/f/ffa425bab7750ca9a25eb1dd98ce4e25_1511411017.jpg#home_hotartist_05"
+      },
+      {
+        "name": "Đan Nguyên",
+        "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/7/d/7d108db512f6a6a929cd0d0ad3b593e8_1511431730.jpg#home_hotartist_06"
+      },
+      {
+        "name": "Quang Lê",
+        "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/9/6/96c7f8568cdc943997aace39708bf7b6_1376539870.jpg#home_hotartist_07"
+      },
+      {
+        "name": "Soobin Hoàng Sơn",
+        "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/8/b/4/c/8b4c040a3f0a64672e8dad7078aff3d1.jpg#home_hotartist_08"
+      },
+      {
+        "name": "Lou Hoàng",
+        "imgUrl": "https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/3/1/d/0/31d0f0e35548bd22f2f0e962eabf3c48.jpg#home_hotartist_09"
+      }
+    ]
+  },
+
+  "songData": {
+    "album": [
+      {
+       "name": "Mine",
+       "artist": "Phoebe Ryan",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
+       "duration": "03:47",
+       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Mine.mp3?alt=media&token=f72b7774-a70e-4d2e-a0b4-1bb542d90aed",
+       "stt": 1
+      },
+      {
+       "name": "All We Know",
+       "artist": "The Chainsmokers, Phoebe Ryan",
+       "imgUrl": "https://avatar-nct.nixcdn.com/song/2018/10/16/e/7/6/4/1539671016316.jpg",
+       "duration": "03:14",
+       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/The%20Chainsmokers%2C%20Phoebe%20Ryan%20%E2%80%93%20All%20We%20Know.mp3?alt=media&token=b23ef9a0-8137-499e-8de1-528573cb3a02",
+       "stt": 2
+      },
+      {
+       "name": "Dead",
+       "artist": "Phoebe Ryan",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
+       "duration": "03:40",
+       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Dead.mp3?alt=media&token=cf9d427f-6bcc-41f4-841e-7b576790455c",
+       "stt": 3
+      },
+      {
+       "name": "Homie",
+       "artist": "Phoebe Ryan",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
+       "duration": "03:17",
+       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Homie.mp3?alt=media&token=f78a9e29-c8b3-47be-91ed-7f4fbcad340b",
+       "stt": 4
+      },
+      {
+       "name": "IgnitionDo You…",
+       "artist": "Phoebe Ryan",
+       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/covers/2/d/2d12ca61d3a8f686f4505bc4f9112027_1438958829.jpg",
+       "duration": "03:47",
+       "songUrl": "https://firebasestorage.googleapis.com/v0/b/my-cv-1206.appspot.com/o/Phoebe%20Ryan%20%E2%80%93%20Ignition-Do%20You....mp3?alt=media&token=cb303d14-0086-482c-9eb0-7fd202a9fa2c",
+       "stt": 5
+      }
+    ],
     "phoebe": {
       "title": "Nhạc của Phoebe Ryan",
       "list": [
@@ -804,44 +886,6 @@
          "imgUrl": "https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/3/f/a/d/3fad6baffd8a3549808485858b38b723.jpg"
         }
       ]
-    },
-  
-    "topFiveData": [
-      {
-       "rank": 1,
-       "name": "Hoa Hải Đường",
-       "artist": "Jack",
-       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/a/8/6/2/a8626a5671f5a01250a074c4c8140cae.jpg",
-       "view": "50,080"
-      },
-      {
-       "rank": 2,
-       "name": "Bông Hoa Đẹp Nhất",
-       "artist": "Quân A.P",
-       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/f/8/1/e/f81efd92fa9a3d52eb37f3b867ab9d32.jpg",
-       "view": "35,559"
-      },
-      {
-       "rank": 3,
-       "name": "Đánh Mất Em",
-       "artist": "Quang Trần Đặng",
-       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/8/3/6/9/83690ac46c2ba7cf46b153e6226c974d.jpg",
-       "view": "24,390"
-      },
-      {
-       "rank": 4,
-       "name": "Anh Mệt Rồi",
-       "artist": "Anh Quân idol",
-       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/2/d/7/d/2d7d033ca7c2a381748e7fb9dc6aa186.jpg",
-       "view": "23,512"
-      },
-      {
-       "rank": 5,
-       "name": "Ai Mang Cô Đơn Đi",
-       "artist": "K-ICM, APJ",
-       "imgUrl": "https://photo-resize-zmp3.zadn.vn/w94_r1x1_jpeg/cover/0/1/5/1/0151bcc5dc64312a9b6d9d2245aab54c.jpg",
-       "view": "21,286"
-      }
-    ]
+    }
   }
 }

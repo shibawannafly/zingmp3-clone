@@ -17,10 +17,11 @@ const Listening:React.FC = ({data, play}: any) => {
                 imgUrl={item.imgUrl}
                 type='round'
                 icon={play.name === item.name ? 'running' : 'play'}
-                time={item.time}
+                time={item.duration}
                 stt={item.stt}
                 songUrl={item.songUrl}
                 music={true}
+                duration={item.duration}
               />
             </li>
           ))
@@ -31,7 +32,7 @@ const Listening:React.FC = ({data, play}: any) => {
 }
 
 const mapStateToProps = state => ({
-  data: state.dataReducer.pageData.listening,
+  data: state.musicReducer.songPageData.album,
   play: state.musicReducer.listening
 })
 
