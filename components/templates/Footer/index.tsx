@@ -15,8 +15,12 @@ const about = [
   "Liên hệ",
 ];
 
-const Footer:React.FC = () => (
-  <footer className={styles.footer}>
+type Props = {
+  st: any
+}
+
+const Footer:React.FC<Props> = ({st}: Props) => (
+  <footer className={styles.footer} style={{...st}}>
     <div className={styles.footerContainer}>
       <div className={styles.licenseContainer}>
         <div className={styles.licenseInfo}>

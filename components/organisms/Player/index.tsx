@@ -7,7 +7,6 @@ import {
   MoreOutlined
 } from '@ant-design/icons'
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
-import VolumeDownIcon from '@material-ui/icons/VolumeDown';
 import VolumeOffIcon from '@material-ui/icons/VolumeOff';
 import { PlayIcon, PauseIcon, LoopIcon, RandomIcon, MicroIcon } from '../../atoms/Icon'
 import {Slider} from 'antd'
@@ -27,6 +26,8 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic}: any) => {
   const [loop, setLoop] = useState(false)
 
   const keyM = useKeyPress('m')
+  const KeyL = useKeyPress('l')
+
   useEffect(() => {
     if(keyM){
       if(volumeIcon){
@@ -36,7 +37,10 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic}: any) => {
       }
       setVolumeIcon(!volumeIcon)
     }
-  }, [keyM])
+    if(KeyL){
+      handleLoop()
+    }
+  }, [keyM, KeyL])
 
 
   // const handleLoadedData = () => {

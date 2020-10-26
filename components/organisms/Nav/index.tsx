@@ -82,7 +82,7 @@ const Nav:React.FC = ({navData}: any) => {
 
 const mapStateToProps = state => {
   return {
-    navData: state.dataReducer.pageData.navData
+    navData: state.dataReducer.pageData.navData || state.musicReducer.songPageData.navData
   }
 }
 

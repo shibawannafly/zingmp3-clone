@@ -6,7 +6,8 @@ import ToTop from '../../atoms/ToTop'
 import Loader from '../../molecules/Loader'
 
 type Props = {
-  children: any
+  children: any,
+  marginB?: number
 }
 
 const Layout:React.FC<Props> = (props: Props) => {
@@ -14,8 +15,8 @@ const Layout:React.FC<Props> = (props: Props) => {
   const [loading, setLoading] = useState(true)
   
   useEffect(() => {
-    // setLoading(false)
-    setTimeout(() => setLoading(false), 500)
+    setLoading(false)
+    // setTimeout(() => setLoading(false), 500)
   }, [])
 
   useEffect(() => {
@@ -44,7 +45,7 @@ const Layout:React.FC<Props> = (props: Props) => {
           <div id='to-top'><ToTop/></div>
         )
       }
-      <Footer/>
+      <Footer st={{marginBottom: props.marginB}}/>
       
     </>
   )

@@ -37,7 +37,6 @@ const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
 
   const ArrowLeft = useKeyPress('ArrowLeft')
   const ArrowRight = useKeyPress('ArrowRight')
-  const KeyP = useKeyPress('p')
 
   useEffect(() => {
     if(ArrowLeft){
@@ -50,10 +49,37 @@ const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
       let next = (index + 1 > album.length - 1) ? 0 : index + 1
       dispatch({type: PLAY_MUSIC, payload: {...album[next]}})
     }
-    if(KeyP) {
+
+    // if(KeyL) {
+
+    // }
+
+    // if(KeyP) {
+    //   setIsRun(!isRun)
+    // }
+  }, [ArrowLeft, ArrowRight])
+
+  const handleUserKeyPress = useCallback(e => {
+    if(e.keyCode === 32){
+      e.preventDefault()
       setIsRun(!isRun)
     }
-  }, [ArrowLeft, ArrowRight, KeyP])
+  }, [isRun])
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleUserKeyPress);
+
+    return () => {
+      window.removeEventListener('keydown', handleUserKeyPress);
+    };
+  })
+
+  // const handleKeyPress = e => {
+  //   if(e.keyCode === 32){
+  //     e.preventDefault()
+  //     setIsRun(!isRun)
+  //   }
+  // }
 
   // const handleKeyPress = e => {
   //   let index = findIndexOfListening(listening, album)
@@ -79,7 +105,7 @@ const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
   const {album, phoebe} = songPageData
 
   return(
-    <Layout >
+    <Layout marginB={70}>
       <Head>
         <title>Songs</title>
       </Head>
