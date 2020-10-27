@@ -38,16 +38,24 @@ const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
   const ArrowLeft = useKeyPress('ArrowLeft')
   const ArrowRight = useKeyPress('ArrowRight')
 
+  const changeSong = (option, album) => {
+    let index = findIndexOfListening(listening, album)
+    let newIndex = null
+    if(option === -1){
+      newIndex = (index - 1 < 0) ? album.length - 1 : index - 1
+    } else {
+      newIndex = (index + 1 > album.length - 1) ? 0 : index + 1
+    }
+    
+    dispatch({type: PLAY_MUSIC, payload: {...album[newIndex]}})
+  } 
+
   useEffect(() => {
     if(ArrowLeft){
-      let index = findIndexOfListening(listening, album)
-      let prev = (index - 1 < 0) ? album.length - 1 : index - 1
-      dispatch({type: PLAY_MUSIC, payload: {...album[prev]}})
+      changeSong(-1, album)
     }
     if(ArrowRight) {
-      let index = findIndexOfListening(listening, album)
-      let next = (index + 1 > album.length - 1) ? 0 : index + 1
-      dispatch({type: PLAY_MUSIC, payload: {...album[next]}})
+      changeSong(1, album)
     }
 
     // if(KeyL) {
@@ -132,6 +140,7 @@ const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
           <Player
             isRun={isRun}
             handlePlayMusic={handlePlayMusic}
+            changeSong={changeSong}
           />
 
         </main>) : null

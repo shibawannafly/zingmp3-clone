@@ -15,8 +15,8 @@ const Layout:React.FC<Props> = (props: Props) => {
   const [loading, setLoading] = useState(true)
   
   useEffect(() => {
-    setLoading(false)
-    // setTimeout(() => setLoading(false), 500)
+    // setLoading(false)
+    setTimeout(() => setLoading(false), 500)
   }, [])
 
   useEffect(() => {

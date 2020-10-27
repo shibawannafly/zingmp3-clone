@@ -15,7 +15,7 @@ import { connect } from 'react-redux'
 import useKeyPress from '../../../hooks/useKeyPress'
 
 
-const Player: React.FC = ({listening, isRun, handlePlayMusic}: any) => {
+const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}: any) => {
   const audioRef = useRef(null) 
 
   const [currentTime, setCurrentTime] = useState(0)
@@ -112,7 +112,7 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic}: any) => {
     <section className={styles.playerWrapper}>
       <div className={styles.player}>
         <div className={styles.controls}>
-          <div className={styles.controlBtn}>
+          <div className={styles.controlBtn} onClick={() => changeSong(-1, album)}>
             <StepBackwardOutlined/>
           </div>
           <div className={styles.playPause} onClick={handlePausePlayClick}>
@@ -123,7 +123,7 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic}: any) => {
                 <PlayIcon />
             } 
           </div>
-          <div className={styles.controlBtn}>
+          <div className={styles.controlBtn} onClick={() => changeSong(1, album)}>
             <StepForwardOutlined />
           </div>
           
@@ -204,7 +204,8 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic}: any) => {
 
 const mapStateToProps = state => {
   return {
-    listening: state.musicReducer.listening
+    listening: state.musicReducer.listening,
+    album: state.musicReducer.songPageData.album
   }
 }
 
