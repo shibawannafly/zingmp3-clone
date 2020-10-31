@@ -32,7 +32,7 @@ const Home:React.FC = ({pageData, fetchData}: any) => {
 
   return (
     <>
-      <Layout>
+      <Layout searchData={pageData}>
         <Head>
           <title>Zing MP3</title>
           <link rel="icon" href="/favicon.ico" />

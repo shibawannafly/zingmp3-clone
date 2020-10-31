@@ -7,7 +7,7 @@ import { playMusic } from "../../../redux/actions/musicAction";
 import Link from "next/link";
 import LazyLoad from 'react-lazyload'
 
-const slug = (str) => {
+export const slug = (str) => {
   if (!str) return;
   // Chuyển hết sang chữ thường
   str = str.toLowerCase();

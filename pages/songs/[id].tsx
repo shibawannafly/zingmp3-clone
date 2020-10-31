@@ -8,7 +8,7 @@ import Player from '../../components/organisms/Player'
 
 import styles from './songPage.module.css'
 
-import {useSelector, connect, useDispatch} from 'react-redux'
+import { connect, useDispatch} from 'react-redux'
 import { FETCH_SONG_PAGE_DATA } from '../../redux/actions/musicAction'
 import { PLAY_MUSIC } from '../../redux/actions/musicAction'
 
@@ -37,6 +37,7 @@ const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
 
   const ArrowLeft = useKeyPress('ArrowLeft')
   const ArrowRight = useKeyPress('ArrowRight')
+  const KeyCtrl = useKeyPress('Control')
 
   const changeSong = (option, album) => {
     let index = findIndexOfListening(listening, album)
@@ -51,10 +52,10 @@ const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
   } 
 
   useEffect(() => {
-    if(ArrowLeft){
+    if(KeyCtrl && ArrowLeft){
       changeSong(-1, album)
     }
-    if(ArrowRight) {
+    if(KeyCtrl && ArrowRight) {
       changeSong(1, album)
     }
 
@@ -65,7 +66,7 @@ const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
     // if(KeyP) {
     //   setIsRun(!isRun)
     // }
-  }, [ArrowLeft, ArrowRight])
+  }, [ArrowLeft, ArrowRight, KeyCtrl])
 
   const handleUserKeyPress = useCallback(e => {
     if(e.keyCode === 32){
