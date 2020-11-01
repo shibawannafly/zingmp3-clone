@@ -6,12 +6,12 @@ import  watcherSaga  from "./sagas";
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware();
 
-const composeEnhancers = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// const composeEnhancers = typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
   rootReducer,
-  composeEnhancers(applyMiddleware(sagaMiddleware))
-  // applyMiddleware(sagaMiddleware)
+  // composeEnhancers(applyMiddleware(sagaMiddleware))
+  applyMiddleware(sagaMiddleware)
 )
 
 // run the saga

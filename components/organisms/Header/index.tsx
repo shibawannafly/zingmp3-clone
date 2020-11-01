@@ -48,6 +48,7 @@ const MenuHeader:React.FC<Props> = ({searchList}: Props) => {
     }
     
     typingRef.current = setTimeout(() => {
+      console.log('search')
       if(keyWord === '') {
         setResultList([])
       } else {
@@ -56,7 +57,7 @@ const MenuHeader:React.FC<Props> = ({searchList}: Props) => {
         })
         setResultList(filteredList)
       }
-    }, 300)
+    }, 400)
   }
 
   type SearchProps = {

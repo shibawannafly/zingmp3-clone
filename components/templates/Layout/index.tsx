@@ -45,8 +45,8 @@ const Layout:React.FC<Props> = (props: Props) => {
         list.push(item.name)
       })
 
-      list = new Set([...list])
-      setSearchList([...list])
+      let newList:any = new Set([...list])
+      setSearchList([...newList])
     }
   }, [props.searchData])
 

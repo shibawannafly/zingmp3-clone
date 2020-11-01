@@ -27,10 +27,10 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
 
   const keyM = useKeyPress('m')
   const KeyL = useKeyPress('l')
-  const KeyCtrl = useKeyPress('Control')
+  // const KeyCtrl = useKeyPress('Control')
 
   useEffect(() => {
-    if(KeyCtrl && keyM){
+    if(keyM){
       if(volumeIcon){
         audioRef.current.volume = 0
       } else {
@@ -38,10 +38,10 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
       }
       setVolumeIcon(!volumeIcon)
     }
-    if(KeyCtrl && KeyL){
+    if(KeyL){
       handleLoop()
     }
-  }, [keyM, KeyL, KeyCtrl])
+  }, [keyM, KeyL])
 
 
   // const handleLoadedData = () => {
