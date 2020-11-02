@@ -1,4 +1,4 @@
-import React, {useState, useRef} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import { Layout, Input } from "antd";
 import styles from "./Header.module.scss";
 import LoginForm from '../LoginForm'
@@ -42,23 +42,24 @@ const MenuHeader:React.FC<Props> = ({searchList}: Props) => {
 
   const handleSearch = e => {
     setKeyWord(e.target.value)
+  }
 
+  useEffect(() => {
     if(typingRef.current){
       clearTimeout(typingRef.current)
     }
-    
     typingRef.current = setTimeout(() => {
-      console.log('search')
       if(keyWord === '') {
         setResultList([])
       } else {
         let filteredList = searchList.filter(item => {
-          return formatText(item.toLowerCase()).includes(formatText(keyWord.toLowerCase()))
+          // return formatText(item).includes(formatText(keyWord))
+          return formatText(item).indexOf(formatText(keyWord)) !== -1
         })
         setResultList(filteredList)
       }
     }, 400)
-  }
+  }, [keyWord])
 
   type SearchProps = {
     list: string[]
