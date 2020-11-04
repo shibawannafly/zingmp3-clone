@@ -4,30 +4,37 @@ import {
   StepBackwardOutlined,
   StepForwardOutlined,
   HeartOutlined,
-  MoreOutlined
+  MoreOutlined,
+  OrderedListOutlined
 } from '@ant-design/icons'
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 import VolumeOffIcon from '@material-ui/icons/VolumeOff';
 import { PlayIcon, PauseIcon, LoopIcon, RandomIcon, MicroIcon } from '../../atoms/Icon'
 import {Slider} from 'antd'
 import { connect } from 'react-redux'
+import { PLAY_MUSIC } from '../../../redux/actions/musicAction'
+import PlayList from '../PlayList'
 
 import useKeyPress from '../../../hooks/useKeyPress'
-
+import {useDispatch, useSelector} from 'react-redux'
 
 const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}: any) => {
   const audioRef = useRef(null) 
-
+  const dispatch = useDispatch()
   const [currentTime, setCurrentTime] = useState(0)
   // const [isPlay, setPlay] = useState(false)
   const [durString, setDurString] = useState('--:--')
   const [volumeIcon, setVolumeIcon] = useState(true)
   const [volume, setVolume] = useState(100)
   const [loop, setLoop] = useState(false)
+  const [random, setRandom] = useState(false)
+  const [openPL, setOpenPL] = useState(false)
+
+  const playListQuantities = useSelector(state => state.musicReducer.playList.length)
 
   const keyM = useKeyPress('m')
   const KeyL = useKeyPress('l')
-  // const KeyCtrl = useKeyPress('Control')
+  const KeyR = useKeyPress('r')
 
   useEffect(() => {
     if(keyM){
@@ -41,7 +48,10 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
     if(KeyL){
       handleLoop()
     }
-  }, [keyM, KeyL])
+    if(KeyR){
+      handleRandom()
+    }
+  }, [keyM, KeyL, KeyR])
 
 
   // const handleLoadedData = () => {
@@ -74,7 +84,26 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
     handlePlayMusic(!isRun);
   } 
 
-  
+  const handleEnded = () => {
+    if(random) {
+      let index, newIndex
+      album.forEach(item => {
+        if(item.name === listening.name){
+          index = album.indexOf(item)
+          newIndex = index
+        }
+      })
+      while(index === newIndex) {
+        newIndex = Math.floor(Math.random() * album.length)
+      }
+
+      // dispatch action play random music
+      dispatch({type: PLAY_MUSIC, payload: {...album[newIndex]}})
+    } else {
+      handlePlayMusic(false)
+    }
+  }
+
 
   const formatDuration = (dur:number) => {
     let minute:any = Math.floor(dur / 60)
@@ -109,6 +138,11 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
     setLoop(audioRef.current.loop)
   }
 
+  const handleRandom = () => {
+    setRandom(!random)
+  }
+
+
   return (
     <section className={styles.playerWrapper}>
       <div className={styles.player}>
@@ -128,12 +162,14 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
             <StepForwardOutlined />
           </div>
           
-          <div className={`${styles.controlBtn} ${loop ? styles.loop : ''}`} 
+          <div className={`${styles.controlBtn} ${loop ? styles.active : ''}`} 
             onClick={handleLoop} >
             <LoopIcon />
           </div>
 
-          <div className={styles.controlBtn}>
+          <div className={`${styles.controlBtn} ${random ? styles.active : ''}`} 
+            onClick={handleRandom}
+          >
             <RandomIcon />
           </div>
 
@@ -153,6 +189,7 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
                 onChange={handleTimeSliderChange}
                 value={currentTime}
                 step={1} style={{margin: '2px 6px'}}
+                tooltipVisible={false}
               />
               </div>
               <audio 
@@ -160,11 +197,11 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
                 ref={audioRef}
                 // onLoadedData={handleLoadedData}
                 onTimeUpdate={() => setCurrentTime(audioRef.current.currentTime)}
-                onEnded={() => handlePlayMusic(false)}
+                onEnded={handleEnded}
               />
           </div>
         </div>
-
+ 
         <div className={styles.features}>
           <div className={styles.featuresBtn}>
             <HeartOutlined />
@@ -197,8 +234,19 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
             <MoreOutlined style={{transform: 'rotate(90deg)'}}/>
           </div>
         </div> 
-      </div>
 
+        <div className={styles.divider}></div>
+
+        <div className={styles.playListContainer}>
+          <div className={styles.playListBtn} onClick={() => setOpenPL(!openPL)}>
+            <div><OrderedListOutlined /></div>
+            <div style={{userSelect: 'none'}}>Danh sách phát{`(${playListQuantities})`}</div>
+          </div>
+          {openPL && <PlayList/>}
+        </div>
+
+      </div>
+      
     </section>
   )
 }

@@ -74,7 +74,7 @@ const Figure: React.FC<Props> = ({
   const isRotate = icon === "pause";
 
   const handleClick = () => {
-    music && dispatch(playMusic(name, artist, imgUrl, songUrl, duration));
+    music && dispatch(playMusic(name, artist, imgUrl, duration, songUrl));
   };
 
   const chooseIcon = (icon) => {
@@ -113,7 +113,7 @@ const Figure: React.FC<Props> = ({
       (
         <>
           <div
-              style={{ borderRadius: radius }}
+              style={{ borderRadius: radius, width: w, height: h}}
               className={`${styles.thumb} ${
                 isRotate
                   ? styles.rotating

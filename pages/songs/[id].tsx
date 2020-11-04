@@ -13,6 +13,7 @@ import { FETCH_SONG_PAGE_DATA } from '../../redux/actions/musicAction'
 import { PLAY_MUSIC } from '../../redux/actions/musicAction'
 
 import useKeyPress from '../../hooks/useKeyPress'
+import { ToastContainer } from 'react-toastify';
 
 const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
   const [isRun, setIsRun] = useState(false)
@@ -37,7 +38,6 @@ const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
 
   const ArrowLeft = useKeyPress('ArrowLeft')
   const ArrowRight = useKeyPress('ArrowRight')
-  const KeyCtrl = useKeyPress('Control')
 
   const changeSong = (option, album) => {
     let index = findIndexOfListening(listening, album)
@@ -52,21 +52,14 @@ const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
   } 
 
   useEffect(() => {
-    if(KeyCtrl && ArrowLeft){
+    if(ArrowLeft){
       changeSong(-1, album)
     }
-    if(KeyCtrl && ArrowRight) {
+    if(ArrowRight) {
       changeSong(1, album)
     }
 
-    // if(KeyL) {
-
-    // }
-
-    // if(KeyP) {
-    //   setIsRun(!isRun)
-    // }
-  }, [ArrowLeft, ArrowRight, KeyCtrl])
+  }, [ArrowLeft, ArrowRight])
 
   const handleUserKeyPress = useCallback(e => {
     if(e.keyCode === 32){
@@ -146,7 +139,7 @@ const User:React.FC = ({fetchSongPageData, songPageData, listening}: any) => {
 
         </main>) : null
       }
-      
+      <ToastContainer newestOnTop={true}/>
     </Layout>
   )
 }

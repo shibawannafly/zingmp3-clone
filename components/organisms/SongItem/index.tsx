@@ -46,6 +46,8 @@ const SongItem:React.FC<Props> = ({name, artist, imgUrl, type, icon, time, stt, 
           name={name}
           artist={artist}
           imgUrl={imgUrl}
+          songUrl={songUrl}
+          duration={time}
           size='small'
         />
       </div>

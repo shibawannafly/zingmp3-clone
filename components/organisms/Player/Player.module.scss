@@ -11,11 +11,12 @@
   bottom: 0;
   left: 0;
   background-image: url('https://zjs.zadn.vn/zmp3-desktop/releases/v0.2.5/images/bg-miniplayer-v1.png');
-  z-index: 100;
+ 
 
   .player {
     @include flex-center;
     height: 100%;
+    z-index: 100;
 
     span {
       cursor: pointer;
@@ -37,7 +38,7 @@
         margin: 0 6px;
         cursor: pointer;
         @include flex-center;
-        &:hover, &.loop {
+        &:hover, &.active {
           background-color: rgba(255, 255, 255, 0.2);
         }
 
@@ -158,6 +159,34 @@
             display: block;
              
           }
+        }
+      }
+    }
+
+    .divider {
+      width: 1px;
+      height: 46px;
+      background-color: rgba(219,219,219,.3);
+      margin-right: 15px;
+    }
+
+    .playListContainer {
+      position: relative;
+
+      .playListBtn {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+        background-color: rgba(219,219,219,.1);
+        cursor: pointer;
+        padding: 8px 16px; 
+        border-radius: 4px;
+        font-size: 12px;
+        width: 160px;
+  
+        &:hover {
+          color: rgb(204, 204, 204);
         }
       }
     }

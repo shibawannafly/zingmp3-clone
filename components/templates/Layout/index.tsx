@@ -30,19 +30,19 @@ const Layout:React.FC<Props> = (props: Props) => {
     if(data && data.albumHot) {
       let list = []
       data.albumHot.list.forEach(item => {
-        list.push(item.name)
+        list.push({name: item.name, imgUrl: item.imgUrl})
       })
 
       data.videoHot.list.forEach(item => {
-        list.push(item.name)
+        list.push({name: item.name, imgUrl: item.imgUrl})
       })
 
       data.todayList.list.forEach(item => {
-        list.push(item.name)
+        list.push({name: item.name, imgUrl: item.imgUrl})
       })
 
       data.topFiveData.forEach(item => {
-        list.push(item.name)
+        list.push({name: item.name, imgUrl: item.imgUrl})
       })
 
       let newList:any = new Set([...list])

@@ -1,17 +1,18 @@
 import React, {useState, useRef, useEffect} from "react";
-import { Layout, Input } from "antd";
+import { Input } from "antd";
 import styles from "./Header.module.scss";
 import LoginForm from '../LoginForm'
 import User from '../../molecules/User'
 import Link from 'next/link'
 import {slug} from '../../molecules/Figure'
+import Figure from '../../molecules/Figure'
 
 const { Search } = Input;
 
 const menuValues = ["MP3", "NEWS", "TV", "ZALO PC"];
 
 type Props = {
-  searchList?: string[]
+  searchList?: any
 }
 
 const MenuHeader:React.FC<Props> = ({searchList}: Props) => {
@@ -47,14 +48,13 @@ const MenuHeader:React.FC<Props> = ({searchList}: Props) => {
   useEffect(() => {
     if(typingRef.current){
       clearTimeout(typingRef.current)
-    }
+    } 
     typingRef.current = setTimeout(() => {
       if(keyWord === '') {
         setResultList([])
       } else {
         let filteredList = searchList.filter(item => {
-          // return formatText(item).includes(formatText(keyWord))
-          return formatText(item).indexOf(formatText(keyWord)) !== -1
+          return formatText(item.name).indexOf(formatText(keyWord)) !== -1
         })
         setResultList(filteredList)
       }
@@ -62,16 +62,24 @@ const MenuHeader:React.FC<Props> = ({searchList}: Props) => {
   }, [keyWord])
 
   type SearchProps = {
-    list: string[]
+    list: any
   }
 
   const SearchBox:React.FC<SearchProps> = ({list}: SearchProps) => (
     <ul className={styles.searchBox}>
       {
         list.map(item => (
-          <li key={item}>
-            <Link href={`/songs/${slug(item)}`}>
-              <a>{item}</a>
+          <li key={item.name}>
+            <Link href={`/songs/${slug(item.name)}`}>
+              <a style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
+                <Figure
+                  imgUrl={item.imgUrl}
+                  showPlay={false}
+                  w={40} h={40}
+                  type='round'
+                />
+                <div style={{marginLeft: 10}}>{item.name}</div>
+              </a>
             </Link>
           </li>
         ))
