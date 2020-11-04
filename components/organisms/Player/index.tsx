@@ -10,7 +10,7 @@ import {
 import VolumeUpIcon from '@material-ui/icons/VolumeUp';
 import VolumeOffIcon from '@material-ui/icons/VolumeOff';
 import { PlayIcon, PauseIcon, LoopIcon, RandomIcon, MicroIcon } from '../../atoms/Icon'
-import {Slider} from 'antd'
+import {Slider, Tooltip} from 'antd'
 import { connect } from 'react-redux'
 import { PLAY_MUSIC } from '../../../redux/actions/musicAction'
 import PlayList from '../PlayList'
@@ -22,15 +22,11 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
   const audioRef = useRef(null) 
   const dispatch = useDispatch()
   const [currentTime, setCurrentTime] = useState(0)
-  // const [isPlay, setPlay] = useState(false)
   const [durString, setDurString] = useState('--:--')
   const [volumeIcon, setVolumeIcon] = useState(true)
   const [volume, setVolume] = useState(100)
   const [loop, setLoop] = useState(false)
   const [random, setRandom] = useState(false)
-  const [openPL, setOpenPL] = useState(false)
-
-  const playListQuantities = useSelector(state => state.musicReducer.playList.length)
 
   const keyM = useKeyPress('m')
   const KeyL = useKeyPress('l')
@@ -147,31 +143,41 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
     <section className={styles.playerWrapper}>
       <div className={styles.player}>
         <div className={styles.controls}>
-          <div className={styles.controlBtn} onClick={() => changeSong(-1, album)}>
-            <StepBackwardOutlined/>
-          </div>
-          <div className={styles.playPause} onClick={handlePausePlayClick}>
-            {
-              isRun ? 
-                <PauseIcon/>
-              : 
-                <PlayIcon />
-            } 
-          </div>
+          {/* <Tooltip placement='top' title='Bài trước'> */}
+            <div className={styles.controlBtn} onClick={() => changeSong(-1, album)}>
+              <StepBackwardOutlined/>
+            </div>
+          {/* </Tooltip> */}
+          <Tooltip placement='top' title={isRun ? 'Dừng' : 'Phát'}>
+            <div className={styles.playPause} onClick={handlePausePlayClick}>
+              {
+                isRun ? 
+                    <PauseIcon/>
+                : 
+                    <PlayIcon />
+                  
+              } 
+            </div>
+          </Tooltip>
           <div className={styles.controlBtn} onClick={() => changeSong(1, album)}>
             <StepForwardOutlined />
           </div>
           
-          <div className={`${styles.controlBtn} ${loop ? styles.active : ''}`} 
-            onClick={handleLoop} >
-            <LoopIcon />
-          </div>
-
-          <div className={`${styles.controlBtn} ${random ? styles.active : ''}`} 
-            onClick={handleRandom}
-          >
-            <RandomIcon />
-          </div>
+          <Tooltip placement='top' title='Lặp'>
+            <div className={`${styles.controlBtn} ${loop ? styles.active : ''}`} 
+              onClick={handleLoop} >
+              <LoopIcon />
+            </div>
+          </Tooltip>
+          
+          <Tooltip placement='top' title='Phát ngẫu nhiên'>
+            <div className={`${styles.controlBtn} ${random ? styles.active : ''}`} 
+              onClick={handleRandom}
+            >
+              <RandomIcon />
+            </div>
+          </Tooltip>
+          
 
         </div>
 
@@ -236,14 +242,14 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
         </div> 
 
         <div className={styles.divider}></div>
-
-        <div className={styles.playListContainer}>
+        <PlayList/>
+        {/* <div className={styles.playListContainer}>
           <div className={styles.playListBtn} onClick={() => setOpenPL(!openPL)}>
             <div><OrderedListOutlined /></div>
             <div style={{userSelect: 'none'}}>Danh sách phát{`(${playListQuantities})`}</div>
           </div>
           {openPL && <PlayList/>}
-        </div>
+        </div> */}
 
       </div>
       

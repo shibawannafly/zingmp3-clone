@@ -50,7 +50,8 @@ type Props = {
   type?: string;
   icon?: string;
   music?: boolean;
-  duration?:string
+  duration?:string;
+  noLazy?:boolean
 };
 
 const Figure: React.FC<Props> = ({
@@ -66,7 +67,8 @@ const Figure: React.FC<Props> = ({
   type,
   icon,
   music,
-  duration
+  duration,
+  noLazy
 }: Props) => {
   const dispatch = useDispatch();
 
@@ -122,14 +124,24 @@ const Figure: React.FC<Props> = ({
                   : ""
               }`}
             >
-              <LazyLoad>
+              {
+                noLazy ? 
                 <img
                   src={imgUrl}
                   alt="image"
                   style={{ width: w, height: h }}
                   className={icon === "running" ? styles.imgRunning : ""}
                 />
-              </LazyLoad>
+                :
+                <LazyLoad>
+                  <img
+                    src={imgUrl}
+                    alt="image"
+                    style={{ width: w, height: h }}
+                    className={icon === "running" ? styles.imgRunning : ""}
+                  />
+                </LazyLoad>
+              }
             </div>
 
             {chooseIcon(icon)}
@@ -149,14 +161,24 @@ const Figure: React.FC<Props> = ({
                 : ""
             }`}
           >
-            <LazyLoad>
+            {
+              noLazy ?
               <img
                 src={imgUrl}
                 alt="image"
                 style={{ width: w, height: h }}
                 className={icon === "running" ? styles.imgRunning : ""}
               />
-            </LazyLoad>
+              :
+              <LazyLoad>
+                <img
+                  src={imgUrl}
+                  alt="image"
+                  style={{ width: w, height: h }}
+                  className={icon === "running" ? styles.imgRunning : ""}
+                />
+              </LazyLoad>
+            }
           </div>
 
           {chooseIcon(icon)}

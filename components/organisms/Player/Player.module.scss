@@ -170,25 +170,25 @@
       margin-right: 15px;
     }
 
-    .playListContainer {
-      position: relative;
+    // .playListContainer {
+    //   position: relative;
 
-      .playListBtn {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        color: #fff;
-        background-color: rgba(219,219,219,.1);
-        cursor: pointer;
-        padding: 8px 16px; 
-        border-radius: 4px;
-        font-size: 12px;
-        width: 160px;
+    //   .playListBtn {
+    //     display: flex;
+    //     justify-content: space-around;
+    //     align-items: center;
+    //     color: #fff;
+    //     background-color: rgba(219,219,219,.1);
+    //     cursor: pointer;
+    //     padding: 8px 16px; 
+    //     border-radius: 4px;
+    //     font-size: 12px;
+    //     width: 160px;
   
-        &:hover {
-          color: rgb(204, 204, 204);
-        }
-      }
-    }
+    //     &:hover {
+    //       color: rgb(204, 204, 204);
+    //     }
+    //   }
+    // }
   }
 }

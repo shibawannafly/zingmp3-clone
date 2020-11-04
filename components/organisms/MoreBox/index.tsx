@@ -25,7 +25,7 @@ type Props = {
 const MoreBox:React.FC<Props> = ({ name, artist, imgUrl, st }: Props) => (
   <section className={styles.moreBox} style={st}>
     <div className={styles.songInfo}>
-      <Figure imgUrl={imgUrl} showPlay={false} type="round" w={40} h={40} icon='running'/>
+      <Figure imgUrl={imgUrl} showPlay={false} type="round" w={40} h={40} icon='running' noLazy={true}/>
       <SongInfo name={name} artist={artist} st={{ marginLeft: 10 }} />
     </div>
 
