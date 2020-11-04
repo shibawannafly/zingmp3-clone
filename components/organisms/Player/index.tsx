@@ -82,17 +82,19 @@ const Player: React.FC = ({listening, isRun, handlePlayMusic, album, changeSong}
 
   const handleEnded = () => {
     if(random) {
+      setCurrentTime(0)
       let index, newIndex
       album.forEach(item => {
         if(item.name === listening.name){
           index = album.indexOf(item)
           newIndex = index
+          console.log('index, newIndex', index, newIndex)
         }
       })
       while(index === newIndex) {
         newIndex = Math.floor(Math.random() * album.length)
       }
-
+      console.log(newIndex)
       // dispatch action play random music
       dispatch({type: PLAY_MUSIC, payload: {...album[newIndex]}})
     } else {
