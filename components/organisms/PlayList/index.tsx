@@ -33,7 +33,6 @@ const PlayList: React.FC = () => {
     deleteNoti(name);
   };
 
-  const emptyIcons = ["\\(o_o)/", "(·_·)", "(>_<)", "(;-;)", "(UwU)", "(OwO)"];
 
   return (
     <div className={styles.playListContainer}>
@@ -70,7 +69,7 @@ const PlayList: React.FC = () => {
             <div className={styles.emptyPlayList}>
               <p className={styles.emptyText}>Danh sách phát trống</p>
               <p className={styles.emptyIcon}>
-                {emptyIcons[Math.floor(Math.random() * emptyIcons.length)]}
+                {`(>_<)`}
               </p>
             </div>
           )}
